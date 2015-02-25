@@ -1,13 +1,13 @@
 {
-	"name"           : "above-the-law",
-	"title"          : "Above The Law",
-	"description"    : "Above The Law",
+	"name"           : "simply-social",
+	"title"          : "Simply Social",
+	"description"    : "Code sample for Invision.",
 	"version"        : "0.1.0",
-	"homepage"       : "http://wordpress.org/themes",
+	"homepage"       : "",
 	"author"         : {
-		"name" : "10up",
-		"email": "edwin.lunandy@10up.com",
-		"url"  : "http://10up.com"
+		"name" : "Edwin Lunandy",
+		"email": "elunandy@gmail.com",
+		"url"  : "http://edwinlunandy.com"
 	},
 	"devDependencies": {
 		"grunt"                 : "~0.4.1",

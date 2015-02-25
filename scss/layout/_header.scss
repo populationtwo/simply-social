@@ -11,27 +11,31 @@
 .right-nav {
 	float: right;
 	color: #FFF;
-	width: 50% //temp
+	width: 350px;
 }
 
 .new-message-btn {
 	height: 31px;
 	width: 31px;
 	display: block;
-	float: left;
+	float: right;
+	margin: 15px 10px;
+
 	@extend .image-replace;
 	background: url("../assets/img/icons/message-cloud.png") center center no-repeat;
 }
 
 .my-account {
-	float: left;
+	float: right;
+
 	> a {
 		display: block;
 	}
 }
 
 .ss-search-bar {
-	float: left;
+	float: right;
+	margin: 15px 10px;
 	.search-input {
 		border: 1px solid white(0.3);
 		padding: rem-calc(6) rem-calc(40) rem-calc(6) rem-calc(10);
@@ -88,28 +92,33 @@
 	position: relative;
 	a {
 		float: left;
-		padding: 12px 30px;
+		padding: rem-calc(15) rem-calc(10);
 		text-transform: uppercase;
-		font-size: 0.875rem;
+		font-size: rem-calc(12);
 		color: rgba(0, 0, 0, 0.5);
+		&:hover {
+			text-decoration: none;
+			background: rgba(0, 0, 0, 0.05);
+			color: #000;
+//			box-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+		}
 	}
 	li {
 		float: left;
 		position: relative;
 	}
 	ul {
-		border: 1px solid rgba(0, 0, 0, 0.3);
 		padding: 0;
 		list-style: none;
 		margin: 20px 0 0 0;
 		opacity: 0;
 		visibility: hidden;
 		position: absolute;
-		top: 38px;
-		left: 0;
+		top: rem-calc(30);
+		left: rem-calc(-10);
 		z-index: 10;
 		background: #F6F6F6;
-		border-radius: 3px;
+		border-radius: 4px;
 		transition: all .1s ease-out;
 		height: auto;
 		li {
@@ -117,15 +126,15 @@
 			display: block;
 			border: 0;
 			_line-height: 0;
-			padding: 0 4px 0 4px;
+//			padding: 0 4px 0 4px;
 			&:first-child > a {
 				border-radius: 3px 3px 0 0;
-				margin-top: 4px;
+//				margin-top: 4px;
 				&:after {
 					content: '';
 					position: absolute;
-					left: 41px;
-					top: -15px;
+					left: rem-calc(55);
+					top: -12px;
 					display: block;
 					width: 0;
 					height: 0;
@@ -133,29 +142,29 @@
 					border-color: transparent transparent #F6F6F6 transparent;
 					border-bottom-style: solid;
 				}
-				&:before {
-					content: '';
-					position: absolute;
-					left: 40px;
-					top: -18px;
-					display: block;
-					width: 0;
-					height: 0;
-					border: inset 7px;
-					border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
-					border-bottom-style: solid;
-				}
+//				&:before {
+//					content: '';
+//					position: absolute;
+//					left: rem-calc(65);
+//					top: -18px;
+//					display: block;
+//					width: 0;
+//					height: 0;
+//					border: inset 7px;
+//					border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
+//					border-bottom-style: solid;
+//				}
 			}
 			&:last-child > a {
-				border-radius: 0 0 3px 3px;
-				margin-bottom: 4px;
+				border-radius: 0 0 4px 4px;
+//				margin-bottom: 4px;
 				box-shadow: none;
 			}
 
 		}
 		a {
-			padding: 10px;
-			width: 230px;
+			padding: rem-calc(10) rem-calc(15);
+			width: rem-calc(97);
 			_height: 10px;
 			display: block;
 			white-space: nowrap;
@@ -168,13 +177,13 @@
 	&:hover > ul {
 		opacity: 1;
 		visibility: visible;
-		margin: 0;
+//		margin: 0;
 	}
 }
 
 .page-header {
-	background-color: #262728;
-
+	background-color: $shark;
+display: none;
 	@include breakpoint($bp-medium) {
 		position: fixed;
 		top: 0;
@@ -182,6 +191,8 @@
 		right: 0;
 		background: #1f1f1f;
 		z-index: 12;
+		display: block;
+
 	}
 
 	//	.mobile-bar {
@@ -222,3 +233,77 @@
 
 }
 
+.ss-mobile-header {
+	background-color: $shark;
+	width: 100%;
+	height: 45px;
+	line-height: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 12;
+
+	@include breakpoint($bp-medium){
+		display: none;
+
+
+//			background: #1f1f1f;
+
+
+
+	}
+}
+
+.mobile-header-inner {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+
+
+
+	.mobile-header-content {
+		float: left;
+		width: 68%;
+		height: 100%;
+		position: absolute;
+		left: 16%;
+		text-align: center;
+	}
+	.menu-btn, .message-mobile-btn {
+		a {
+//			@extend .image-replace;
+//			background: none;
+			text-align: center;
+			width: auto;
+			padding: 4px;
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+		}
+	}
+	.menu-btn {
+		float: left;
+		padding-left: rem-calc(15);
+
+	}
+	.message-mobile-btn {
+		float: right;
+		/* margin-right: 2.5%; */
+		padding-right: rem-calc(15);
+		a {
+			margin: 7px 0;
+			width: 31px;
+			display: block;
+		}
+	}
+
+
+
+}
+.mobile-header-content a {
+	padding: 10px 0;
+	display: block;
+
+}
