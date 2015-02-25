@@ -14,201 +14,231 @@
 	<!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
 </head>
 <body>
-<div class="outer-wrapper">
 
-	<div class="menu-wrap">
-		<nav class="menu">
-			<div class="icon-list">
-				<a href="#"><i class="fa fa-fw fa-star-o"></i><span>Favorites</span></a>
-				<a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Alerts</span></a>
-				<a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Messages</span></a>
-				<a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Comments</span></a>
-				<a href="#"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a>
-				<a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
+	<a href="http://browsehappy.com/">upgrade
+		your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="ss-mobile-header">
+	<div class="mobile-header-inner">
+		<div class="message-mobile-btn">
+			<a href="#" class="new-message-btn">New message</a>
+
+			<!--<a href="#" id="user-nav" class="closed icon-user">					<img src="assets/img/avatar-1.png" alt="" />-->
+			<!--</a>-->
+		</div>
+
+		<div class="mobile-header-content">
+
+			<a href="#">
+				<img src="assets/img/main-logo.png" alt="SimpySocial" />
+			</a>
+		</div>
+
+		<div class="menu-btn">
+			<a href="#" id="main-nav" class="icon-menu ">Menu</a>
+		</div>
+	</div>
+</div>
+
+
+<header class="page-header">
+	<div class="container">
+		<!--<div class="mobile-bar">-->
+		<!---->
+		<!--</div>-->
+		<h1 class="logo">
+			<a href="#">
+				<img src="assets/img/main-logo.png" alt="" />
+			</a>
+		</h1>
+
+		<div class="right-nav">
+
+			<div class="my-account dropdown-menu">
+
+				<a class="avatar " href="">
+					<img src="assets/img/avatar-1.png" alt="" />
+					<span class="caret"></span>
+				</a>
+				<ul class="sub-nav">
+					<li><a href="">Profile</a></li>
+					<li><a href="">Following</a></li>
+					<li><a href="">Followers</a></li>
+					<li><a href="">Setting</a></li>
+				</ul>
+
+			</div>
+
+			<div class="ss-search-bar">
+				<form role="search" method="get" action="">
+					<input type="text" placeholder="" class="search-input" />
+					<button type="submit" class="search-btn"></button>
+				</form>
+			</div>
+			<a href="#" class="new-message-btn">New message</a>
+
+
+		</div>
+		<!--<nav class="main-nav">-->
+
+
+		<!--<ul>-->
+		<!--<li><a class="new-msg" href="#">new</a></li>-->
+		<!--<li>-->
+		<!--<div id="brg-search-bar" class="brg-search-bar right">-->
+		<!--<form role="search" method="get" action="http://localhost/wordpress6/">-->
+		<!--<input class="brg-search-bar-input" placeholder="Search" type="text" value="" name="s" id="s">-->
+		<!--<input id="searchsubmit" class="brg-search-bar-submit" type="submit" value="">-->
+		<!--<span class="sb-icon-search"></span>-->
+		<!--</form>-->
+		<!--</div>-->
+		<!--</li>-->
+		<!--<li>-->
+		<!--<div class="my-account">-->
+		<!--avatar-->
+		<!--</div>-->
+		<!--</li>-->
+		<!--</ul>-->
+
+
+		<!--</nav>-->
+	</div>
+</header>
+<div class="content">
+	<div class="hero-header">
+
+	</div>
+	<div class="page-content">
+		<nav class="sub-nav">
+			<ul class="nav">
+				<li class="nav-item"><a class="nav-link" href="">All Posts</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Photos</a></li>
+				<li class="nav-item"><a class="nav-link" href="">Videos</a></li>
+			</ul>
+
+			<div class="view-buttons">
+				<a class="" href="">List</a>
+				<a class="" href="">Grid</a>
+
+
 			</div>
 		</nav>
-		<button class="close-button" id="close-button">Close Menu</button>
-	</div>
-	<!--<button class="menu-button" id="open-button">Open Menu</button>-->
+		<div class="main-content">
 
-	<div class="canvas-content-wrap">
-	<div class="canvas-content">
-
-		<!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
-			<a href="http://browsehappy.com/">upgrade
-				your browser</a> to improve your experience.</p>
-		<![endif]-->
-
-		<div class="ss-mobile-header">
-			<div class="mobile-header-inner">
-				<div class="message-mobile-btn">
-					<a href="#" class="new-message-btn">New message</a>
-
-					<!--<a href="#" id="user-nav" class="closed icon-user">					<img src="assets/img/avatar-1.png" alt="" />-->
-					<!--</a>-->
-				</div>
-
-				<div class="mobile-header-content">
-
-					<a href="#">
-						<img src="assets/img/main-logo.png" alt="SimpySocial" />
-					</a>
-				</div>
-
-				<div class="menu-btn">
-					<a href="#" id="main-nav" class="icon-menu ">Menu</a>
-				</div>
-			</div>
-		</div>
-
-
-		<header class="page-header">
 			<div class="container">
-				<!--<div class="mobile-bar">-->
-				<!---->
-				<!--</div>-->
-				<h1 class="logo">
-					<a href="#">
-						<img src="assets/img/main-logo.png" alt="" />
-					</a>
-				</h1>
+				<section class="tile post-entry">
+					<article class="post panel">
+						<div class="post-wrap">
+							<div class="post-main">
 
-				<div class="right-nav">
+								<div class="post-avatar">
+									<img src="assets/img/avatar-1.png" alt="" />
+								</div>
+								<div class="post-body">
+									<div class="post-author-wrap">
+										<div class="post-author">Sam Soffess</div>
+										<div class="post-meta">share
+										</div>
+									</div>
+									<div class="post-content">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
+										debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
+										eius itaque nobis numquam quibusdam sapiente sit voluptatum!
+									</div>
+									<div class="post-action">
+										expand
+									</div>
+								</div>
+							</div>
 
-					<div class="my-account dropdown-menu">
+						</div>
 
-						<a class="avatar " href="">
-							<img src="assets/img/avatar-1.png" alt="" />
-							<span class="caret"></span>
-						</a>
-						<ul class="sub-nav">
-							<li><a href="">Profile</a></li>
-							<li><a href="">Following</a></li>
-							<li><a href="">Followers</a></li>
-							<li><a href="">Setting</a></li>
-						</ul>
-
-					</div>
-
-					<div class="ss-search-bar">
-						<form role="search" method="get" action="">
-							<input type="text" placeholder="" class="search-input" />
-							<button type="submit" class="search-btn"></button>
-						</form>
-					</div>
-					<a href="#" class="new-message-btn">New message</a>
-
-
-				</div>
-				<!--<nav class="main-nav">-->
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+						ipsam magni maxime quae.
 
 
-				<!--<ul>-->
-				<!--<li><a class="new-msg" href="#">new</a></li>-->
-				<!--<li>-->
-				<!--<div id="brg-search-bar" class="brg-search-bar right">-->
-				<!--<form role="search" method="get" action="http://localhost/wordpress6/">-->
-				<!--<input class="brg-search-bar-input" placeholder="Search" type="text" value="" name="s" id="s">-->
-				<!--<input id="searchsubmit" class="brg-search-bar-submit" type="submit" value="">-->
-				<!--<span class="sb-icon-search"></span>-->
-				<!--</form>-->
-				<!--</div>-->
-				<!--</li>-->
-				<!--<li>-->
-				<!--<div class="my-account">-->
-				<!--avatar-->
-				<!--</div>-->
-				<!--</li>-->
-				<!--</ul>-->
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+						ipsam magni maxime quae.
 
 
-				<!--</nav>-->
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+						ipsam magni maxime quae.
+
+
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur ahic inventore, iure labore neque quae quos reiciendis!
+						Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
+
+
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
+						Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
+						Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
+						Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
+
+
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+						ipsam magni maxime quae.
+
+
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+						ipsam magni maxime quae.
+
+
+					</article>
+					<article class="post panel">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+						ipsam magni maxime quae.
+
+
+					</article>
+				</section>
 			</div>
-		</header>
-		<div class="content">
-			<div class="hero-header">
-
-			</div>
-			<div class="page-content">
-				<nav class="sub-nav">
-					<ul class="nav">
-						<li class="nav-item"><a class="nav-link" href="">All Posts</a></li>
-						<li class="nav-item"><a class="nav-link" href="">Photos</a></li>
-						<li class="nav-item"><a class="nav-link" href="">Videos</a></li>
-					</ul>
-
-					<div class="view-buttons">
-						<a class="" href="">List</a>
-						<a class="" href="">Grid</a>
-
-
-					</div>
-				</nav>
-				<div class="main-content">
-
-					<div class="container">
-						<section>
-							<article>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error et eveniet
-								harum iure
-								nobis, placeat quasi recusandae. Ipsa modi, sed? Dignissimos exercitationem fugit
-								impedit iste
-								molestias numquam officiis perferendis.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error et eveniet
-								harum iure
-								nobis, placeat quasi recusandae. Ipsa modi, sed? Dignissimos exercitationem fugit
-								impedit iste
-								molestias numquam officiis perferendis.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error et eveniet
-								harum iure
-								nobis, placeat quasi recusandae. Ipsa modi, sed? Dignissimos exercitationem fugit
-								impedit iste
-								molestias numquam officiis perferendis.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error et eveniet
-								harum iure
-								nobis, placeat quasi recusandae. Ipsa modi, sed? Dignissimos exercitationem fugit
-								impedit iste
-								molestias numquam officiis perferendis.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error et eveniet
-								harum iure
-								nobis, placeat quasi recusandae. Ipsa modi, sed? Dignissimos exercitationem fugit
-								impedit iste
-								molestias numquam officiis perferendis.
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error et eveniet
-								harum iure
-								nobis, placeat quasi recusandae. Ipsa modi, sed? Dignissimos exercitationem fugit
-								impedit iste
-								molestias numquam officiis perferendis.
-
-							</article>
-						</section>
-					</div>
-				</div>
-
-			</div>
-
 		</div>
-		<footer class="page-footer">
-			<ul class="footer-links footer-links-social">
-				<li>
-					<a href="" class="icon">About Us</a>
-				</li>
-				<li>
-					<a href="" class="icon">Support</a>
-				</li>
-				<li>
-					<a href="" class="icon">Privacy</a>
-				</li>
-				<li>
-					<a href="" class="icon">Terms</a>
-				</li>
-				<li>&copy; 2015 SimplySocial</li>
-			</ul>
-		</footer>
 
 	</div>
-	</div>
+
+</div>
+<footer class="page-footer">
+	<ul class="footer-links footer-links-social">
+		<li>
+			<a href="" class="icon">About Us</a>
+		</li>
+		<li>
+			<a href="" class="icon">Support</a>
+		</li>
+		<li>
+			<a href="" class="icon">Privacy</a>
+		</li>
+		<li>
+			<a href="" class="icon">Terms</a>
+		</li>
+		<li>&copy; 2015 SimplySocial</li>
+	</ul>
+</footer>
+
 
 </div>
 

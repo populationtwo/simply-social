@@ -1,0 +1,35 @@
+
+.post-entry {
+	&.tile {
+		@include column-gap(rem-calc(20));
+
+		@include breakpoint($bp-medium) {
+
+			@include column-count(2);
+
+		}
+
+		@include breakpoint($bp-large) {
+
+			@include column-count(3);
+
+		}
+	}
+	&.list {
+		padding: 0;
+		//		@include column-count(1);
+
+		max-width: 570px;
+		margin: 0 auto;
+	}
+}
+
+.panel {
+	@include single-transition(transform, 0.2s, linear);
+	display: inline-block;
+	background: #fff;
+	margin: 0 0 rem-calc(25);
+	width: 100%;
+	@include box-sizing(border-box);
+	border: 1px solid $gray-lighter;
+}
