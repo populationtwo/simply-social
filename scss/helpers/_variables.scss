@@ -30,7 +30,7 @@ $gray-light:   #999;
 $gray-lighter: #dee1e5;
 
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 
 
 
@@ -42,10 +42,9 @@ $gray-lighter: #dee1e5;
 /**
  * Responsive breakpoints
  */
-
-$bp-medium 	: 40.063em; 	//641px
-$bp-large 	: 64.063em; 	//1025px
-$bp-xlarge 	: 90.063em; 	//1440px
+$medium-screen 	: 40.063em; 	//641px
+$large-screen 	: 64.063em; 	//1025px
+$xlarge-screen 	: 90.063em; 	//1440px
 
 /**
  * misc

@@ -3,7 +3,7 @@
 	overflow: hidden;
 	text-align: center;
 	border-top: 1px solid #dee1e5;
-	@include breakpoint($bp-medium) {
+	@include breakpoint($medium-screen) {
 		clear: both;
 		position: relative;
 		z-index: 11;

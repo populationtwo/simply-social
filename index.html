@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Simply Social</title>
 	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
@@ -109,116 +109,250 @@
 	</div>
 </header>
 <div class="content">
-	<div class="hero-header">
+<div class="hero-header">
+	<div class="container">
+		<div class="compose-post">
 
+			<span class="input">
+	<input class="input-field" type="text" id="input-1" />
+	<label class="input-label" for="input-1">
+		<span class="input-label-content">First Name</span>
+	</label>
+</span>
+
+
+
+			<!--<textarea aria-hidden="true" class="" name="status"></textarea>-->
+		</div>
 	</div>
-	<div class="page-content">
-		<nav class="sub-nav">
-			<ul class="nav">
-				<li class="nav-item"><a class="nav-link" href="">All Posts</a></li>
-				<li class="nav-item"><a class="nav-link" href="">Photos</a></li>
-				<li class="nav-item"><a class="nav-link" href="">Videos</a></li>
-			</ul>
 
-			<div class="view-buttons">
-				<a class="" href="">List</a>
-				<a class="" href="">Grid</a>
+</div>
+<div class="page-content">
+<nav class="sub-nav">
+	<ul class="nav">
+		<li class="nav-item"><a class="nav-link" href="">All Posts</a></li>
+		<li class="nav-item"><a class="nav-link" href="">Photos</a></li>
+		<li class="nav-item"><a class="nav-link" href="">Videos</a></li>
+	</ul>
 
+	<div class="view-buttons" >
+		<a class="view-list" href="" id="view-list-toggle">List</a>
+		<a class="view-tile" href="" id="view-tile-toggle">Tile</a>
+	</div>
+</nav>
+<div class="main-content">
 
-			</div>
-		</nav>
-		<div class="main-content">
+<div class="container">
+<section class="tile post-entry" id="ss-all-posts">
+	<article class="post panel">
+		<div class="post-wrap">
+			<div class="post-main">
+				<div class="post-body">
+					<div class="post-header-wrap">
+						<a href="" class="post-author">
+							<img class="post-avatar" src="assets/img/avatar/40/sam.png" alt="" />
+							<span>Sam Soffess</span></a>
 
-			<div class="container">
-				<section class="tile post-entry">
-					<article class="post panel">
-						<div class="post-wrap">
-							<div class="post-main">
-
-								<div class="post-avatar">
-									<img src="assets/img/avatar-1.png" alt="" />
-								</div>
-								<div class="post-body">
-									<div class="post-author-wrap">
-										<div class="post-author">Sam Soffess</div>
-										<div class="post-meta">share
-										</div>
-									</div>
-									<div class="post-content">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
-										debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
-										eius itaque nobis numquam quibusdam sapiente sit voluptatum!
-									</div>
-									<div class="post-action">
-										expand
-									</div>
-								</div>
-							</div>
-
+						<div class="post-meta top">
+							<ul>
+								<li><a href="" class="post-action-btn reply">reply</a></li>
+								<li>
+									<a href="" class="post-action-btn favorite">favorite</a>
+								</li>
+								<li>
+									<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
+								</li>
+							</ul>
 						</div>
+					</div>
+					<div class="post-content">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
+						debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
+						eius itaque nobis numquam quibusdam sapiente sit voluptatum!
+					</div>
 
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-						ipsam magni maxime quae.
-
-
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-						ipsam magni maxime quae.
+				</div>
+			</div>
 
 
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-						ipsam magni maxime quae.
+			<div class="post-action">
+				<a href="" class="expand">Expand</a>
+
+				<div class="post-meta bottom">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
 
 
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur ahic inventore, iure labore neque quae quos reiciendis!
-						Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
-
-
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
-						Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
-						Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
-						Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
-
-
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-						ipsam magni maxime quae.
-
-
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-						ipsam magni maxime quae.
-
-
-					</article>
-					<article class="post panel">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-						neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-						ipsam magni maxime quae.
-
-
-					</article>
-				</section>
+			<div class="post-replies">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, debitis eius expedita harum
+				molestiae necessitatibus quos sapiente. Blanditiis eos esse exercitationem facilis id modi
+				necessitatibus omnis porro quod voluptatibus! Maxime?
 			</div>
 		</div>
 
-	</div>
+	</article>
+	<article class="post panel">
+		<div class="post-wrap">
+			<div class="post-main">
+				<div class="post-body">
+					<div class="post-header-wrap">
+						<a href="" class="post-author">
+							<img class="post-avatar" src="assets/img/avatar/40/sam.png" alt="" />
+							<span>Sam Soffess</span></a>
+
+						<div class="post-meta top">
+							<ul>
+								<li><a href="" class="post-action-btn reply">reply</a></li>
+								<li>
+									<a href="" class="post-action-btn favorite">favorite</a>
+								</li>
+								<li>
+									<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="post-content">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
+						debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
+						eius itaque nobis numquam quibusdam sapiente sit voluptatum!
+					</div>
+
+				</div>
+			</div>
+			<div class="post-action">
+				<a href="" class="expand">Expand</a>
+
+				<div class="post-meta bottom">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</article>
+
+	<article class="post panel">
+		<div class="post-wrap">
+			<div class="post-main">
+				<div class="post-body">
+					<div class="post-header-wrap">
+						<a href="" class="post-author">
+							<img class="post-avatar" src="assets/img/avatar/40/sam.png" alt="" />
+							<span>Sam Soffess</span></a>
+
+						<div class="post-meta top">
+							<ul>
+								<li><a href="" class="post-action-btn reply">reply</a></li>
+								<li>
+									<a href="" class="post-action-btn favorite">favorite</a>
+								</li>
+								<li>
+									<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="post-content">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
+						debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
+						eius itaque nobis numquam quibusdam sapiente sit voluptatum!
+					</div>
+
+				</div>
+			</div>
+			<div class="post-image">
+				<img src="http://placehold.it/500x300" alt="" />
+			</div>
+			<div class="post-action">
+				<!--<a href="" class="expand">Expand</a>-->
+				<div class="post-meta bottom">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</article>
+
+
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+		ipsam magni maxime quae.
+
+
+	</article>
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+		ipsam magni maxime quae.
+
+
+	</article>
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consectetur ahic inventore, iure labore neque quae quos reiciendis!
+		Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
+
+
+	</article>
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
+		Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
+		Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
+		Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
+
+
+	</article>
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+		ipsam magni maxime quae.
+
+
+	</article>
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+		ipsam magni maxime quae.
+
+
+	</article>
+	<article class="post panel">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
+		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
+		ipsam magni maxime quae.
+
+
+	</article>
+</section>
+</div>
+</div>
+
+</div>
 
 </div>
 <footer class="page-footer">
@@ -245,8 +379,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 
-<script src="js/classie.js"></script>
-<script src="js/front.js"></script>
+<!--<script src="js/classie.js"></script>-->
+<script src="js/main.js"></script>
 
 
 </body>

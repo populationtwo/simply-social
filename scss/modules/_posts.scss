@@ -3,13 +3,13 @@
 	&.tile {
 		@include column-gap(rem-calc(20));
 
-		@include breakpoint($bp-medium) {
+		@include breakpoint($medium-screen) {
 
 			@include column-count(2);
 
 		}
 
-		@include breakpoint($bp-large) {
+		@include breakpoint($large-screen) {
 
 			@include column-count(3);
 
@@ -32,4 +32,104 @@
 	width: 100%;
 	@include box-sizing(border-box);
 	border: 1px solid $gray-lighter;
+	@include border-radius(4px);
+	overflow: hidden;
+}
+
+.post-main {
+	padding: 20px 25px;
+}
+
+.post-body {
+	margin-left: 60px;
+
+	@include breakpoint(461px) {
+
+	}
+
+}
+
+.post-header-wrap {
+	@extend %clearfix;
+
+	margin-bottom: rem-calc(-10);
+
+}
+
+.post-avatar {
+	float: left;
+
+	margin-left: rem-calc(-60);
+
+}
+
+.post-author {
+	//	width:60%;
+	//	float: left;
+	span {
+		color: #444;
+
+		//
+	}
+	//	&:hover, &:focus {
+	//		text-decoration: none;
+	//
+	//	}
+}
+
+.post-meta {
+	float: right;
+
+
+	ul {
+		@extend %inline-list;
+	}
+
+}
+
+.tile .post-meta.top, .list .post-meta.bottom {
+	display: none;
+}
+
+.post-action-btn {
+	background: url("../assets/img/icons/post-cta.png") 0 0 no-repeat;
+	width: 13px;
+	height: 13px;
+	@extend .image-replace;
+	&.reply {
+		background-position: 0 0;
+		&:hover, &:active {
+			background-position: 0 -30px;
+
+		}
+
+	}
+	&.favorite {
+		background-position: -35px 0;
+		&:hover, &:active {
+			background-position: -35px -30px;
+
+		}
+	}
+}
+
+.post-action-time {
+	font-size: rem-calc(14);
+	color: #cbcfd6;
+}
+
+.post-image img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.post-action {
+	@extend %clearfix;
+	padding-left: 84px;
+	padding-right: 20px;
+	margin: 15px 0;
+}
+
+.post-replies {
+	background: rgba(0,0,0,0.1);
 }
