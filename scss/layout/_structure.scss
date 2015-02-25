@@ -1,7 +1,11 @@
 .hero-header {
-	margin-top: rem-calc(60);
+	margin-top: rem-calc(45);
 	background: url("../assets/img/hero-img.jpg");
 	height: rem-calc(425px);
+	@include breakpoint($bp-medium){
+		margin-top: rem-calc(60);
+
+	}
 }
 
 .sub-nav {
