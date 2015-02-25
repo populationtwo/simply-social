@@ -1,0 +1,21 @@
+.hero-header {
+	margin-top: rem-calc(60);
+	background: url("../assets/img/hero-img.jpg");
+	height: rem-calc(425px);
+}
+
+.sub-nav {
+	@include outer-container();
+	margin-top: rem-calc(-80);
+	height: rem-calc(80);
+	background: black(0.05);
+}
+
+.page-content {
+	//	padding: rem-calc(50) 0 rem-calc(100);
+}
+
+.main-content {
+	padding: rem-calc(50) 0 rem-calc(100);
+
+}
