@@ -1,0 +1,29 @@
+.ss-form {
+	padding: rem-calc(24) rem-calc(20);
+	border-top: 1px solid black(0.05);
+	input {
+		margin: 0;
+		padding: 0;
+		border-radius: rem-calc(3);
+		&.full-width {
+			width: 100%;
+		}
+		&.has-border {
+			@include appearance(none);
+			border: 1px solid $gray-lighter;
+			&:focus {
+				border-color: $gray-light;
+				box-shadow: 0 0 5px black(0.1);
+				outline: none;
+			}
+		}
+		&.has-padding {
+			padding: rem-calc(12) rem-calc(15);
+		}
+	}
+
+	.fieldset {
+		position: relative;
+	}
+
+}

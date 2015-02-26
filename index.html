@@ -130,9 +130,9 @@
 				</li>
 			</ul>
 			<ul class="view-nav">
-				<li><a class="view-nav__item" href="" id="view-list-toggle"><span class="icon-th-large"></span></a>
+				<li><a class="view-nav__item " href="" id="view-tile"><span class="icon-th-large"></span></a>
 				</li>
-				<li><a class="view-nav__item" href="" id="view-tile-toggle"><span class="icon-menu"></span></a></li>
+				<li><a class="view-nav__item active" href="" id="view-list"><span class="icon-menu"></span></a></li>
 			</ul>
 		</nav>
 
@@ -178,6 +178,7 @@
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!--<script src="assets/js/classie.js"></script>-->
+<script src="assets/js/modal.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
 	(function () {
@@ -211,6 +212,15 @@
 		}
 	})();
 </script>
+
+
+<button id="trigger" class="trigger-button" type="button">Launch Modal</button>
+
+<div id="content">
+	<h1>Look at me!</h1>
+	<p>I'm a modal window.</p>
+</div>
+
 
 </body>
 </html>

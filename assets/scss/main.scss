@@ -29,7 +29,7 @@
 @import "layout/_structure";
 @import "layout/_header";
 @import "layout/_footer";
-
+//
 /*------------------------------------------------------------------
 
 4.  MODULES
@@ -38,6 +38,8 @@
 // Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on
 @import "modules/_posts";
 @import "modules/_navigation";
+@import "modules/_modal";
+@import "modules/_forms";
 
 
 /*------------------------------------------------------------------

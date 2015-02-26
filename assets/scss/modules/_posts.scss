@@ -1,6 +1,6 @@
 
 .post-entry {
-	&.tile {
+	&.view-tile {
 		@include column-gap(rem-calc(20));
 
 		@include breakpoint($medium-screen) {
@@ -15,7 +15,7 @@
 
 		}
 	}
-	&.list {
+	&.view-list {
 		padding: 0;
 		//		@include column-count(1);
 
@@ -85,14 +85,14 @@
 	}
 }
 
-.tile .post-meta.top, .list .post-meta.bottom {
+.view-tile .post-meta.top, .view-list .post-meta.bottom {
 	display: none;
 }
-.list .post-action {
+.view-list .post-action {
 	display: none;
 
 }
-.list .has-expand .post-action {
+.view-list .has-expand .post-action {
 	display: block;
 
 }

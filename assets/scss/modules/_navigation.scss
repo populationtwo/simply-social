@@ -89,7 +89,7 @@
 		@include single-transition(border, 0.2s, ease-in);
 		opacity: 0.75;
 
-		&:hover {
+		&:hover, &.active {
 			//			border-bottom: 4px solid $caribbean-green;
 			opacity: 1;
 

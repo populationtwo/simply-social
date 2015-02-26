@@ -6,27 +6,7 @@
 //	closebtn = document.getElementById( 'close-button' ),
 //	isOpen = false;
 
-function init() {
-	//initEvents();
-	toggleView();
 
-}
-
-
-function toggleView() {
-	$( '#view-list-toggle' ).on( 'click', function (e) {
-		e.preventDefault();
-		$( '#ss-all-posts' ).removeClass( 'list, tile' ).addClass( 'list' );
-		console.log( 'asdf' );
-	} );
-	$( '#view-tile-toggle' ).on( 'click', function (e) {
-		e.preventDefault();
-
-		$( '#ss-all-posts' ).removeClass( 'tile, list' ).addClass( 'tile' );
-		console.log( 'dfdf' );
-
-	} );
-}
 //
 //
 
@@ -54,17 +34,16 @@ $( document ).ready( function () {
 
 	//var bodyEl = document.body,
 	//content = document.querySelector( '.content-wrap' ),
-	var filterBar = document.getElementById( 'filterbar' )
+	//var filterBar = document.getElementById( 'filterbar' )
 //	closebtn = document.getElementById( 'close-button' ),
 //	isOpen = false;
 
 	function init() {
 		//initEvents();
 		filterPosts();
+		toggleView();
 
 	}
-
-
 
 
 	$( '#partials-content' ).load( "partials/all.html" );
@@ -75,25 +54,72 @@ $( document ).ready( function () {
 		document.getElementById( "#partials-content" ).innerHTML = '<object type="type/html" data="partials/video.html"></object>'
 	} );
 
-function filterPosts() {
-	//Sub Nav filter bar
+	function filterPosts() {
+		//Sub Nav filter bar
 
-	filterBar.click( function () {
-		$( ".panel" ).show();
-		$( "#filterbar a" ).parent().removeClass( "active" );
-		$( this ).parent().addClass( "active" );
-		return false;
+		$( "#filterbar" ).click( function () {
+			$( ".panel" ).show();
+			$( "#filterbar a" ).parent().removeClass( "active" );
+			$( this ).parent().addClass( "active" );
+			return false;
+		} );
+
+		$( ".filter" ).click( function () {
+			var thisFilter = $( this ).attr( "id" );
+			$( ".panel" ).hide();
+			$( "." + thisFilter ).fadeIn();
+			$( "#filterbar a" ).parent().removeClass( "active" );
+			$( this ).parent().addClass( "active" );
+			return false;
+		} );
+	}
+
+
+	function toggleView() {
+
+		$( '.view-nav__item' ).on( 'click', function (e) {
+		var thisView = $( this ).attr( "id" );
+		e.preventDefault();
+			$('.view-nav__item').removeClass( "active" );
+			$(this).addClass( "active" );
+			$( '#ss-all-posts' ).removeClass( 'view-list' ).removeClass( 'view-tile' ).addClass( thisView );
+		} );
+		//$( '#view-tile-toggle' ).on( 'click', function (e) {
+		//	e.preventDefault();
+		//	$('.view-nav__item').removeClass( "active" );
+		//	$(this).addClass( "active" );
+		//	$( '#ss-all-posts' ).removeClass( 'tile, list' ).addClass( 'tile' );
+		//
+		//} );
+
+
+		//$( '#view-list-toggle' ).on( 'click', function (e) {
+		//	e.preventDefault();
+		//	$('.view-nav__item').removeClass( "active" );
+		//	$(this).addClass( "active" );
+		//	$( '#ss-all-posts' ).removeClass( 'list, tile' ).addClass( 'list' );
+		//} );
+		//$( '#view-tile-toggle' ).on( 'click', function (e) {
+		//	e.preventDefault();
+		//	$('.view-nav__item').removeClass( "active" );
+		//	$(this).addClass( "active" );
+		//	$( '#ss-all-posts' ).removeClass( 'tile, list' ).addClass( 'tile' );
+		//
+		//} );
+	}
+
+	var myContent = document.getElementById( 'content' );
+
+	var myModal = new Modal( {
+		content: myContent
 	} );
 
-	$( ".filter" ).click( function () {
-		var thisFilter = $( this ).attr( "id" );
-		$( ".panel" ).hide();
-		$( "." + thisFilter ).fadeIn();
-		$( "#filterbar a" ).parent().removeClass( "active" );
-		$( this ).parent().addClass( "active" );
-		return false;
+	var triggerButton = document.getElementById( 'trigger' );
+
+	triggerButton.addEventListener( 'click', function () {
+		myModal.open();
 	} );
-}
+
 
 	init();
 } );
