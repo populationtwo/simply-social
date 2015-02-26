@@ -47,12 +47,11 @@ $( document ).ready( function () {
 
 
 	$( '#partials-content' ).load( "partials/all.html" );
+	//$( '#partials-modal-content' ).load( "partials/modals.html" );
 
-	$( '#nav-videos' ).on( 'click', function (e) {
-		//e.preventDefault();
-		//$( '#partials-content' ).load(  "partials/video.html");
-		document.getElementById( "#partials-content" ).innerHTML = '<object type="type/html" data="partials/video.html"></object>'
-	} );
+
+	//document.getElementById( "#partials-modal-content" ).innerHTML = '<object type="type/html" data="partials/modals.html"></object>'
+
 
 	function filterPosts() {
 		//Sub Nav filter bar
@@ -78,10 +77,10 @@ $( document ).ready( function () {
 	function toggleView() {
 
 		$( '.view-nav__item' ).on( 'click', function (e) {
-		var thisView = $( this ).attr( "id" );
-		e.preventDefault();
-			$('.view-nav__item').removeClass( "active" );
-			$(this).addClass( "active" );
+			var thisView = $( this ).attr( "id" );
+			e.preventDefault();
+			$( '.view-nav__item' ).removeClass( "active" );
+			$( this ).addClass( "active" );
 			$( '#ss-all-posts' ).removeClass( 'view-list' ).removeClass( 'view-tile' ).addClass( thisView );
 		} );
 		//$( '#view-tile-toggle' ).on( 'click', function (e) {
@@ -108,18 +107,65 @@ $( document ).ready( function () {
 		//} );
 	}
 
-	var myContent = document.getElementById( 'content' );
 
-	var myModal = new Modal( {
-		content: myContent
+	var myContent1 = document.getElementById( 'meg-photo' );
+	var myContent2 = document.getElementById( 'jenny-photo' );
+	var myContent3 = document.getElementById( 'buzz-photo' );
+	var myContent4 = document.getElementById( 'samihah-photo' );
+	var myContent5 = document.getElementById( 'jac-video' );
+	var myContent6 = document.getElementById( 'vitor-video' );
+	var myContent7 = document.getElementById( 'michael-video' );
+
+	var myModal1 = new Modal( {
+		content: myContent1
+	} );
+	var myModal2 = new Modal( {
+		content: myContent2
+	} );
+	var myModal3 = new Modal( {
+		content: myContent3
+	} );
+	var myModal4 = new Modal( {
+		content: myContent4
+	} );
+	var myModal5 = new Modal( {
+		content: myContent5
+	} );
+	var myModal6 = new Modal( {
+		content: myContent6
+	} );
+	var myModal7 = new Modal( {
+		content: myContent7
 	} );
 
-	var triggerButton = document.getElementById( 'trigger' );
-
-	triggerButton.addEventListener( 'click', function () {
-		myModal.open();
+	$( '.main-content' ).on( 'click', "#modal-trigger-meg", function (e) {
+		e.preventDefault();
+		myModal1.open();
 	} );
-
+	$( '.main-content' ).on( 'click', "#modal-trigger-jenny", function (e) {
+		e.preventDefault();
+		myModal2.open();
+	} );
+	$( '.main-content' ).on( 'click', "#modal-trigger-buzz", function (e) {
+		e.preventDefault();
+		myModal3.open();
+	} );
+	$( '.main-content' ).on( 'click', "#modal-trigger-samihah", function (e) {
+		e.preventDefault();
+		myModal4.open();
+	} );
+	$( '.main-content' ).on( 'click', "#modal-trigger-jac", function (e) {
+		e.preventDefault();
+		myModal5.open();
+	} );
+	$( '.main-content' ).on( 'click', "#modal-trigger-vitor", function (e) {
+		e.preventDefault();
+		myModal6.open();
+	} );
+	$( '.main-content' ).on( 'click', "#modal-trigger-michael", function (e) {
+		e.preventDefault();
+		myModal7.open();
+	} );
 
 	init();
 } );

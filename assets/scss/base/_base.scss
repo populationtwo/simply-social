@@ -119,6 +119,33 @@ img {
 	content: "";
 }
 
+
+
+.video-wrap {
+	position: relative;
+	padding-top: 1.5625rem;
+	padding-bottom: 67.5%;
+	height: 0;
+	margin-bottom: 1rem;
+	overflow: hidden;
+	padding-top: 0;
+	padding-bottom: 56.34%;
+
+
+}
+
+.video-wrap iframe,
+.video-wrap object,
+.video-wrap embed,
+.video-wrap video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
 .container {
 	@include outer-container();
 }

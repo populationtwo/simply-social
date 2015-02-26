@@ -1,7 +1,7 @@
 // Create an immediately invoked functional expression to wrap our code
 (function() {
 
-	// Define our constructor
+	// Define our constructor 
 	this.Modal = function() {
 
 		// Create global element references
@@ -12,14 +12,14 @@
 		// Determine proper prefix
 		this.transitionEnd = transitionSelect();
 
-		// Define option defaults
+		// Define option defaults 
 		var defaults = {
 			autoOpen: false,
 			className: 'fade-and-drop',
 			closeButton: true,
 			content: "",
-			maxWidth: 600,
-			minWidth: 280,
+			maxWidth: 980,
+			minWidth: 300,
 			overlay: true
 		}
 
@@ -36,8 +36,8 @@
 
 	Modal.prototype.close = function() {
 		var _ = this;
-		this.modal.className = this.modal.className.replace(" scotch-open", "");
-		this.overlay.className = this.overlay.className.replace(" scotch-open",
+		this.modal.className = this.modal.className.replace(" ss-open", "");
+		this.overlay.className = this.overlay.className.replace(" ss-open",
 			"");
 		this.modal.addEventListener(this.transitionEnd, function() {
 			_.modal.parentNode.removeChild(_.modal);
@@ -53,8 +53,8 @@
 		window.getComputedStyle(this.modal).height;
 		this.modal.className = this.modal.className +
 		(this.modal.offsetHeight > window.innerHeight ?
-			" scotch-open scotch-anchored" : " scotch-open");
-		this.overlay.className = this.overlay.className + " scotch-open";
+			" ss-open ss-anchored" : " ss-open");
+		this.overlay.className = this.overlay.className + " ss-open";
 	}
 
 	// Private Methods
@@ -79,14 +79,14 @@
 
 		// Create modal element
 		this.modal = document.createElement("div");
-		this.modal.className = "scotch-modal " + this.options.className;
+		this.modal.className = "ss-modal " + this.options.className;
 		this.modal.style.minWidth = this.options.minWidth + "px";
 		this.modal.style.maxWidth = this.options.maxWidth + "px";
 
 		// If closeButton option is true, add a close button
 		if (this.options.closeButton === true) {
 			this.closeButton = document.createElement("button");
-			this.closeButton.className = "scotch-close close-button";
+			this.closeButton.className = "ss-close close-button";
 			this.closeButton.innerHTML = "&times;";
 			this.modal.appendChild(this.closeButton);
 		}
@@ -94,13 +94,13 @@
 		// If overlay is true, add one
 		if (this.options.overlay === true) {
 			this.overlay = document.createElement("div");
-			this.overlay.className = "scotch-overlay " + this.options.className;
+			this.overlay.className = "ss-overlay " + this.options.className;
 			docFrag.appendChild(this.overlay);
 		}
 
 		// Create content area and append to modal
 		contentHolder = document.createElement("div");
-		contentHolder.className = "scotch-content";
+		contentHolder.className = "ss-content";
 		contentHolder.innerHTML = content;
 		this.modal.appendChild(contentHolder);
 
@@ -142,4 +142,3 @@
 	}
 
 }());
-

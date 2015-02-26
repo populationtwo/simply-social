@@ -1,14 +1,14 @@
 
 .post-entry {
 	&.view-tile {
-		@include column-gap(rem-calc(20));
-
-		@include breakpoint($medium-screen) {
-
-			@include column-count(2);
-
-		}
-
+		//		@include column-gap(rem-calc(20));
+		//
+		//		@include breakpoint($medium-screen) {
+		//
+		//			@include column-count(2);
+		//
+		//		}
+		//
 		@include breakpoint($large-screen) {
 
 			@include column-count(3);
@@ -88,10 +88,12 @@
 .view-tile .post-meta.top, .view-list .post-meta.bottom {
 	display: none;
 }
+
 .view-list .post-action {
 	display: none;
 
 }
+
 .view-list .has-expand .post-action {
 	display: block;
 
@@ -166,3 +168,33 @@
 	background: $athens-gray;
 	display: none;
 }
+
+.post-video .post-image a {
+	display: block;
+	position: relative;
+	&:hover {
+		> div {
+			opacity: 1;
+
+		}
+	}
+	> div {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 50%;
+		z-index: 1;
+		left: 50%;
+		margin-top: -50px;
+		margin-left: -50px;
+		opacity: 0.5;
+	}
+}
+//
+//.view-tile {
+//
+//	.post-video .post-image a {
+//		display: inherit;
+//		position: static;
+//	}
+//}
