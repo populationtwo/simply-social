@@ -102,7 +102,21 @@ img {
 //
 
 
-
+.caret {
+	border-top-width: 5px;
+	border-right-width: 5px;
+	border-left-width: 5px;
+	margin-top: rem-calc(13);
+	margin-left: rem-calc(4);
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: top;
+	border-top: 4px solid white(0.3);
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: "";
+}
 
 .container {
 	@include outer-container();

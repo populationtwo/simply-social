@@ -1,20 +1,17 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Simply Social</title>
-	<meta name="description" content="">
+	<meta name="description" content="Invision Code Test">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<!-- Place favicon.ico in the root directory -->
-
-	<link rel="stylesheet" href="css/main.min.css">
-	<!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+	<link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please
@@ -43,13 +40,11 @@
 		</div>
 	</div>
 </div>
-
+<!--end .ss-mobile-header-->
 
 <header class="page-header">
 	<div class="container">
-		<!--<div class="mobile-bar">-->
-		<!---->
-		<!--</div>-->
+
 		<h1 class="logo">
 			<a href="#">
 				<img src="assets/img/main-logo.png" alt="" />
@@ -59,7 +54,6 @@
 		<div class="right-nav">
 
 			<div class="my-account dropdown-menu">
-
 				<a class="avatar " href="">
 					<img src="assets/img/avatar-1.png" alt="" />
 					<span class="caret"></span>
@@ -70,7 +64,6 @@
 					<li><a href="">Followers</a></li>
 					<li><a href="">Setting</a></li>
 				</ul>
-
 			</div>
 
 			<div class="ss-search-bar">
@@ -80,281 +73,75 @@
 				</form>
 			</div>
 			<a href="#" class="new-message-btn">New message</a>
-
-
 		</div>
-		<!--<nav class="main-nav">-->
+		<!-- end .righ-nav -->
 
-
-		<!--<ul>-->
-		<!--<li><a class="new-msg" href="#">new</a></li>-->
-		<!--<li>-->
-		<!--<div id="brg-search-bar" class="brg-search-bar right">-->
-		<!--<form role="search" method="get" action="http://localhost/wordpress6/">-->
-		<!--<input class="brg-search-bar-input" placeholder="Search" type="text" value="" name="s" id="s">-->
-		<!--<input id="searchsubmit" class="brg-search-bar-submit" type="submit" value="">-->
-		<!--<span class="sb-icon-search"></span>-->
-		<!--</form>-->
-		<!--</div>-->
-		<!--</li>-->
-		<!--<li>-->
-		<!--<div class="my-account">-->
-		<!--avatar-->
-		<!--</div>-->
-		<!--</li>-->
-		<!--</ul>-->
-
-
-		<!--</nav>-->
 	</div>
 </header>
+<!-- end .page-header -->
+
 <div class="content">
-<div class="hero-header">
-	<div class="container">
-		<div class="compose-post">
+	<div class="hero-header">
+		<div class="container">
+			<div class="compose-post">
 
-			<span class="input">
-	<input class="input-field" type="text" id="input-1" />
-	<label class="input-label" for="input-1">
-		<span class="input-label-content">First Name</span>
-	</label>
-</span>
+				<!--<span class="input">-->
+				<!--<input class="input-field" type="text" id="input-1" />-->
+				<!--<label class="input-label" for="input-1">-->
+				<!--<span class="input-label-content">What's on your mind?</span>-->
+				<!--</label>-->
+				<!--</span>-->
 
 
+			<span class="input input--akira">
+					<input class="input__field input__field--akira" type="text" id="input-22" />
+					<label class="input__label input__label--akira" for="input-22">
+						<span class="input__label-content input__label-content--akira">What's on your mind?</span>
+					</label>
+				</span>
 
-			<!--<textarea aria-hidden="true" class="" name="status"></textarea>-->
+
+				<div class="add-attachment">
+					<ul>
+						<li><a href="">Add Photo</a></li>
+						<li><a href="">Add Video</a></li>
+					</ul>
+				</div>
+
+				<!--<textarea aria-hidden="true" class="" name="status"></textarea>-->
+			</div>
 		</div>
+
 	</div>
+	<!-- end .hero-header -->
 
-</div>
-<div class="page-content">
-<nav class="sub-nav">
-	<ul class="nav">
-		<li class="nav-item"><a class="nav-link" href="">All Posts</a></li>
-		<li class="nav-item"><a class="nav-link" href="">Photos</a></li>
-		<li class="nav-item"><a class="nav-link" href="">Videos</a></li>
-	</ul>
+	<div class="page-content">
+		<nav class="sub-nav">
+			<ul class="nav">
+				<li class="nav-item" id="nav-all-post"><a class="nav-link" href="">All Posts</a></li>
+				<li class="nav-item" id="nav-photos"><a class="nav-link" href="">Photos</a></li>
+				<li class="nav-item" id="nav-videos"><a class="nav-link" href="">Videos</a></li>
+			</ul>
+			<div class="view-buttons">
+				<a class="view-list" href="" id="view-list-toggle">List</a>
+				<a class="view-tile" href="" id="view-tile-toggle">Tile</a>
+			</div>
+		</nav>
 
-	<div class="view-buttons" >
-		<a class="view-list" href="" id="view-list-toggle">List</a>
-		<a class="view-tile" href="" id="view-tile-toggle">Tile</a>
+
+		<div class="main-content">
+			<div class="container" id="partials-content">
+				<!-- ===== Load  content from /partials ===== -->
+			</div>
+		</div>
+		<!-- end .main-content -->
+
 	</div>
-</nav>
-<div class="main-content">
-
-<div class="container">
-<section class="tile post-entry" id="ss-all-posts">
-	<article class="post panel">
-		<div class="post-wrap">
-			<div class="post-main">
-				<div class="post-body">
-					<div class="post-header-wrap">
-						<a href="" class="post-author">
-							<img class="post-avatar" src="assets/img/avatar/40/sam.png" alt="" />
-							<span>Sam Soffess</span></a>
-
-						<div class="post-meta top">
-							<ul>
-								<li><a href="" class="post-action-btn reply">reply</a></li>
-								<li>
-									<a href="" class="post-action-btn favorite">favorite</a>
-								</li>
-								<li>
-									<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="post-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
-						debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
-						eius itaque nobis numquam quibusdam sapiente sit voluptatum!
-					</div>
-
-				</div>
-			</div>
-
-
-			<div class="post-action">
-				<a href="" class="expand">Expand</a>
-
-				<div class="post-meta bottom">
-					<ul>
-						<li><a href="" class="post-action-btn reply">reply</a></li>
-						<li>
-							<a href="" class="post-action-btn favorite">favorite</a>
-						</li>
-						<li>
-							<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-
-			<div class="post-replies">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, debitis eius expedita harum
-				molestiae necessitatibus quos sapiente. Blanditiis eos esse exercitationem facilis id modi
-				necessitatibus omnis porro quod voluptatibus! Maxime?
-			</div>
-		</div>
-
-	</article>
-	<article class="post panel">
-		<div class="post-wrap">
-			<div class="post-main">
-				<div class="post-body">
-					<div class="post-header-wrap">
-						<a href="" class="post-author">
-							<img class="post-avatar" src="assets/img/avatar/40/sam.png" alt="" />
-							<span>Sam Soffess</span></a>
-
-						<div class="post-meta top">
-							<ul>
-								<li><a href="" class="post-action-btn reply">reply</a></li>
-								<li>
-									<a href="" class="post-action-btn favorite">favorite</a>
-								</li>
-								<li>
-									<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="post-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
-						debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
-						eius itaque nobis numquam quibusdam sapiente sit voluptatum!
-					</div>
-
-				</div>
-			</div>
-			<div class="post-action">
-				<a href="" class="expand">Expand</a>
-
-				<div class="post-meta bottom">
-					<ul>
-						<li><a href="" class="post-action-btn reply">reply</a></li>
-						<li>
-							<a href="" class="post-action-btn favorite">favorite</a>
-						</li>
-						<li>
-							<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-	</article>
-
-	<article class="post panel">
-		<div class="post-wrap">
-			<div class="post-main">
-				<div class="post-body">
-					<div class="post-header-wrap">
-						<a href="" class="post-author">
-							<img class="post-avatar" src="assets/img/avatar/40/sam.png" alt="" />
-							<span>Sam Soffess</span></a>
-
-						<div class="post-meta top">
-							<ul>
-								<li><a href="" class="post-action-btn reply">reply</a></li>
-								<li>
-									<a href="" class="post-action-btn favorite">favorite</a>
-								</li>
-								<li>
-									<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="post-content">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem consequatur
-						debitis incidunt nostrum odit praesentium quam qui. Aperiam, cum cumque deleniti
-						eius itaque nobis numquam quibusdam sapiente sit voluptatum!
-					</div>
-
-				</div>
-			</div>
-			<div class="post-image">
-				<img src="http://placehold.it/500x300" alt="" />
-			</div>
-			<div class="post-action">
-				<!--<a href="" class="expand">Expand</a>-->
-				<div class="post-meta bottom">
-					<ul>
-						<li><a href="" class="post-action-btn reply">reply</a></li>
-						<li>
-							<a href="" class="post-action-btn favorite">favorite</a>
-						</li>
-						<li>
-							<a href="" class="post-action-time "><span class="" aria-hidden="true">5m</span></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-	</article>
-
-
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-		ipsam magni maxime quae.
-
-
-	</article>
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-		ipsam magni maxime quae.
-
-
-	</article>
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consectetur ahic inventore, iure labore neque quae quos reiciendis!
-		Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
-
-
-	</article>
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
-		Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
-		Lorem ipsum dolor sit amet, consecteturic inventore, iure labore neque quae quos reiciendis!
-		Illum labore magnam numquam quas! Corporis earum facere incidunt ipsam magni maxime quae.
-
-
-	</article>
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-		ipsam magni maxime quae.
-
-
-	</article>
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-		ipsam magni maxime quae.
-
-
-	</article>
-	<article class="post panel">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate hic inventore, iure labore
-		neque quae quos reiciendis! Illum labore magnam numquam quas! Corporis earum facere incidunt
-		ipsam magni maxime quae.
-
-
-	</article>
-</section>
-</div>
-</div>
+	<!-- end .page-content -->
 
 </div>
+<!-- end .content -->
 
-</div>
 <footer class="page-footer">
 	<ul class="footer-links footer-links-social">
 		<li>
@@ -372,16 +159,45 @@
 		<li>&copy; 2015 SimplySocial</li>
 	</ul>
 </footer>
-
+<!-- end .page-footer -->
 
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!--<script src="assets/js/classie.js"></script>-->
+<script src="assets/js/main.js"></script>
+<script>
+	(function () {
+		// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+		if (!String.prototype.trim) {
+			(function () {
+				// Make sure we trim BOM and NBSP
+				var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+				String.prototype.trim = function () {
+					return this.replace( rtrim, '' );
+				};
+			})();
+		}
+		[].slice.call( document.querySelectorAll( 'input.input-field' ) ).forEach( function (inputEl) {
+			// in case the input is already filled..
+			if (inputEl.value.trim() !== '') {
+				classie.add( inputEl.parentNode, 'input--filled' );
+			}
+			// events:
+			inputEl.addEventListener( 'focus', onInputFocus );
+			inputEl.addEventListener( 'blur', onInputBlur );
+		} );
+		function onInputFocus(ev) {
+			classie.add( ev.target.parentNode, 'input--filled' );
+		}
 
-
-<!--<script src="js/classie.js"></script>-->
-<script src="js/main.js"></script>
-
+		function onInputBlur(ev) {
+			if (ev.target.value.trim() === '') {
+				classie.remove( ev.target.parentNode, 'input--filled' );
+			}
+		}
+	})();
+</script>
 
 </body>
 </html>

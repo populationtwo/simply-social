@@ -11,8 +11,9 @@ module.exports = function (grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: 'scss',
-					cssDir : 'css'
+					sassDir: 'assets/scss',
+					cssDir : 'assets/css',
+					outputStyle : 'compressed'
 				}
 			}
 		},
@@ -37,8 +38,8 @@ module.exports = function (grunt) {
 		},
 		watch  : {
 			css: {
-				files  : ['scss/**/*.scss', 'scss/*.scss' ],
-				tasks  : ['compass','cssmin'],
+				files  : ['assets/scss/**/*.scss', 'assets/scss/*.scss' ],
+				tasks  : ['compass'],
 				options: {
 					debounceDelay: 500
 				}

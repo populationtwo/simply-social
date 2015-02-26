@@ -7,9 +7,9 @@
 // All Sass tools and helpers.
 @import "compass/reset";
 @import "compass/css3";
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/variables";
+@import "helpers/_mixins";
+@import "helpers/_functions";
+@import "helpers/_variables";
 @import "compass/typography";
 
 /*------------------------------------------------------------------
@@ -18,7 +18,7 @@
 
 ------------------------------------------------------------------*/
 // Base rules are the defaults. They are almost exclusively single element selectors.
-@import "base/base";
+@import "base/_base";
 
 /*------------------------------------------------------------------
 
@@ -26,9 +26,9 @@
 
 ------------------------------------------------------------------*/
 // Layout rules divide the page into sections. Layouts hold one or more modules together.
-@import "layout/structure";
-@import "layout/header";
-@import "layout/footer";
+@import "layout/_structure";
+@import "layout/_header";
+@import "layout/_footer";
 
 /*------------------------------------------------------------------
 
@@ -36,7 +36,7 @@
 
 ------------------------------------------------------------------*/
 // Modules are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on
-@import "modules/posts";
+@import "modules/_posts";
 
 
 /*------------------------------------------------------------------
