@@ -10,7 +10,6 @@ function init() {
 	//initEvents();
 	toggleView();
 
-
 }
 
 
@@ -28,7 +27,8 @@ function toggleView() {
 
 	} );
 }
-
+//
+//
 
 $( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
 
@@ -58,6 +58,25 @@ $( document ).ready( function () {
 		//$( '#partials-content' ).load(  "partials/video.html");
 		document.getElementById( "#partials-content" ).innerHTML = '<object type="type/html" data="partials/video.html"></object>'
 	} );
+
+
+
+	$("#allcat").click(function(){
+		$(".panel").show();
+		$("#catpicker a").removeClass("current");
+		$(this).addClass("current");
+		return false;
+	});
+
+	$(".filter").click(function(){
+		var thisFilter = $(this).attr("id");
+		$(".panel").hide();
+		$("."+ thisFilter).fadeIn();
+		$("#catpicker a").removeClass("current");
+		$(this).addClass("current");
+		return false;
+	});
+
 
 
 } );

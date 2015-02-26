@@ -83,11 +83,18 @@
 	ul {
 		@extend %inline-list;
 	}
-
 }
 
 .tile .post-meta.top, .list .post-meta.bottom {
 	display: none;
+}
+.list .post-action {
+	display: none;
+
+}
+.list .has-expand .post-action {
+	display: block;
+
 }
 
 .post-content {
@@ -156,6 +163,6 @@
 }
 
 .post-replies {
-	background: rgba(0, 0, 0, 0.1);
+	background: $athens-gray;
 	display: none;
 }
