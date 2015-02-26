@@ -9,6 +9,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/vendor/fontello/css/fontello.css">
 	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
@@ -117,22 +118,29 @@
 
 	<div class="page-content">
 		<nav class="sub-nav">
-			<ul class="nav">
-				<li class="nav-item" id="nav-all-post"><a class="nav-link" href="">All Posts</a></li>
-				<li class="nav-item" id="nav-photos"><a class="nav-link" href="">Photos</a></li>
-				<li class="nav-item" id="nav-videos"><a class="nav-link" href="">Videos</a></li>
+			<ul class="filter-nav" id="filterbar">
+				<li class="filter-nav__item active">
+					<a class="" href="#" id="post-all"><span class="icon-comment icon"></span><span>All Posts</span></a>
+				</li>
+				<li class="filter-nav__item">
+					<a class="filter" href="#" id="post-photo"><span class="icon-camera-outline icon"></span><span>Photos<span></a>
+				</li>
+				<li class="filter-nav__item">
+					<a class="filter" href="#" id="post-video"><span class="icon-videocam icon"></span><span>Videos<span></a>
+				</li>
 			</ul>
-			<div class="view-buttons">
-				<a class="view-list" href="" id="view-list-toggle">List</a>
-				<a class="view-tile" href="" id="view-tile-toggle">Tile</a>
-			</div>
+			<ul class="view-nav">
+				<li><a class="view-nav__item" href="" id="view-list-toggle"><span class="icon-th-large"></span></a>
+				</li>
+				<li><a class="view-nav__item" href="" id="view-tile-toggle"><span class="icon-menu"></span></a></li>
+			</ul>
 		</nav>
-		<p id="catpicker">
-			<a href="#" id="allcat" class="current">VIEW ALL</a> |
-			<a href="#" id="video" class="filter">video Pricing</a> |
-			<a href="#" id="photo" class="filter">photo Shipping</a> |
 
-		</p>
+		<!--<p id="catpicker">-->
+		<!--<a href="#" id="allcat" class="current">VIEW ALL</a> |-->
+		<!--<a href="#" id="video" class="filter">video Pricing</a> |-->
+		<!--<a href="#" id="photo" class="filter">photo Shipping</a> |-->
+		<!--</p>-->
 
 		<div class="main-content">
 			<div class="container" id="partials-content">

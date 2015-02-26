@@ -38,11 +38,11 @@ $( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
 	var thisComments2 = $( this ).parent().siblings( ".js-post-replies:visible" );
 	if (thisComments2.length) {
 		thisComments.slideUp( 200 );
-		$(this).toggleClass('up');
+		$( this ).toggleClass( 'up' );
 
 	} else {
 		thisComments.slideDown( 200 );
-		$(this).toggleClass('up');
+		$( this ).toggleClass( 'up' );
 
 	}
 
@@ -50,6 +50,22 @@ $( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
 
 
 $( document ).ready( function () {
+
+
+	//var bodyEl = document.body,
+	//content = document.querySelector( '.content-wrap' ),
+	var filterBar = document.getElementById( 'filterbar' )
+//	closebtn = document.getElementById( 'close-button' ),
+//	isOpen = false;
+
+	function init() {
+		//initEvents();
+		filterPosts();
+
+	}
+
+
+
 
 	$( '#partials-content' ).load( "partials/all.html" );
 
@@ -59,26 +75,27 @@ $( document ).ready( function () {
 		document.getElementById( "#partials-content" ).innerHTML = '<object type="type/html" data="partials/video.html"></object>'
 	} );
 
+function filterPosts() {
+	//Sub Nav filter bar
 
-
-	$("#allcat").click(function(){
-		$(".panel").show();
-		$("#catpicker a").removeClass("current");
-		$(this).addClass("current");
+	filterBar.click( function () {
+		$( ".panel" ).show();
+		$( "#filterbar a" ).parent().removeClass( "active" );
+		$( this ).parent().addClass( "active" );
 		return false;
-	});
+	} );
 
-	$(".filter").click(function(){
-		var thisFilter = $(this).attr("id");
-		$(".panel").hide();
-		$("."+ thisFilter).fadeIn();
-		$("#catpicker a").removeClass("current");
-		$(this).addClass("current");
+	$( ".filter" ).click( function () {
+		var thisFilter = $( this ).attr( "id" );
+		$( ".panel" ).hide();
+		$( "." + thisFilter ).fadeIn();
+		$( "#filterbar a" ).parent().removeClass( "active" );
+		$( this ).parent().addClass( "active" );
 		return false;
-	});
+	} );
+}
 
-
-
+	init();
 } );
 
 //function initEvents() {
@@ -106,6 +123,6 @@ $( document ).ready( function () {
 //	isOpen = !isOpen;
 //}
 //
-init();
+//init();
 
 //})();

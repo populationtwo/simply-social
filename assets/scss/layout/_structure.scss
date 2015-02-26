@@ -1,11 +1,5 @@
 
 
-.sub-nav {
-	@include outer-container();
-	margin-top: rem-calc(-80);
-	height: rem-calc(80);
-	background: black(0.05);
-}
 
 .page-content {
 	//	padding: rem-calc(50) 0 rem-calc(100);
