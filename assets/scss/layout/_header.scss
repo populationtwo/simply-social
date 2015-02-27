@@ -26,7 +26,7 @@
 	margin: 15px 10px;
 
 	@extend .image-replace;
-	background: url("../img/icons/message-cloud.png") center center no-repeat;
+	background: url("../img/build/icons/message-cloud.png") center center no-repeat;
 }
 
 .my-account {
@@ -59,7 +59,7 @@
 		}
 	}
 	.search-btn {
-		background: url("../img/icons/search.png") 0 0 no-repeat;
+		background: url("../img/build/icons/search.png") 0 0 no-repeat;
 		border: 0;
 		font-size: 18px;
 		color: #cbe2cb;
@@ -258,7 +258,7 @@
 
 .hero-header {
 	margin-top: rem-calc(45);
-	background: url("../img/hero-img.jpg") top center repeat-x;
+	background: url("../img/build/hero-img.jpg") top center repeat-x;
 	@include breakpoint($medium-screen) {
 		margin-top: rem-calc(60);
 
@@ -291,7 +291,7 @@
 .add-attachment {
 	@extend %inline-list;
 	.attachment-photo, .attachment-video {
-		background: url("../img/icons/attachment-icon.png") 0 0 no-repeat;
+		background: url("../img/build/icons/attachment-icon.png") 0 0 no-repeat;
 		padding-left: rem-calc(30);
 		font-size: rem-calc(14);
 		opacity: 0.5;
@@ -388,7 +388,7 @@
 
 		}
 		.attachment-photo, .attachment-video {
-			background: url("../img/icons/attachment-icon-dark.png") 0 center no-repeat;
+			background: url("../img/build/icons/attachment-icon-dark.png") 0 center no-repeat;
 
 			opacity: 0.7;
 			color: #70767f;
