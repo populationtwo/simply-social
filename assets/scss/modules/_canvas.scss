@@ -2,12 +2,12 @@
 	Canvas Mobile Menu
 -------------------------------------------------------------- */
 
-.menu-wrap a {
+.ss-mobile-menu-wrapper a {
 	color: $athens-gray;
 }
 
-.menu-wrap a:hover,
-.menu-wrap a:focus {
+.ss-mobile-menu-wrapper a:hover,
+.ss-mobile-menu-wrapper a:focus {
 	color: $caribbean-green;
 	text-decoration: none;
 }
@@ -64,7 +64,7 @@
 	}
 }
 
-.menu-wrap {
+.ss-mobile-menu-wrapper {
 	position: fixed;
 	top: 45px;
 	z-index: 1001;
@@ -96,7 +96,7 @@
 
 }
 
-.show-menu .menu-wrap {
+.ss-mobile-menu-active .ss-mobile-menu-wrapper {
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 	-webkit-transition: -webkit-transform 0.8s;
@@ -105,7 +105,7 @@
 	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.show-menu .content-main::before {
+.ss-mobile-menu-active .content-main::before {
 	opacity: 1;
 	-webkit-transition: opacity 0.8s;
 	transition: opacity 0.8s;

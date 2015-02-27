@@ -1,36 +1,63 @@
-$( document ).ready( function () {
+(function (window, $, undefined) {
 
+	// Declare all variables
 	var bodyElement = document.body,
 		contentWrap = document.querySelector( '.content-wrap' ),
 		toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
+		$mainContent = $( '.main-content' ),
+		$filterBar = $( document.getElementById( 'filterbar' ) ),
+		$allPost = $( '#partials-content' ),
+		$viewNavItem = $( '.view-nav__item' ),
+		$mobileMenuWrapper = $( '.ss-mobile-menu-wrapper' ),
+		$mobileMenuToggle = $( '#js-mobile-menu' ),
+		$html = $( 'html' ),
 		isOpen = false;
 
-	function showReplies() { // Toggle to display post replies
-		$( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
+
+	/**
+	 * Post Reply Toggle
+	 *
+	 * @param e
+	 */
+
+	function showReplies() {
+		$mainContent.on( 'click', ".js-btn-expand", function (e) {
 			e.preventDefault();
-			var thisComments = $( this ).parent().siblings( ".js-post-replies" );
-			var thisCommentsVisible = $( this ).parent().siblings( ".js-post-replies:visible" );
-			if (thisCommentsVisible.length) {
-				thisComments.slideUp( 200 );
-				$( this ).toggleClass( 'up' );
+			var $comments = $( this ).parent(),
+				$thisComments = $comments.siblings( ".js-post-replies" ),
+				$thisCommentsVisible = $comments.siblings( ".js-post-replies:visible" ),
+				$this = $( this );
+
+			if ($thisCommentsVisible.length) {
+				$thisComments.slideUp( 200 );
+				$this.toggleClass( 'up' );
 			} else {
-				thisComments.slideDown( 200 );
-				$( this ).toggleClass( 'up' );
+				$thisComments.slideDown( 200 );
+				$this.toggleClass( 'up' );
 			}
 		} );
 	}
 
+	/**
+	 * Load Posts from /partials.
+	 *
+	 * @param e
+	 */
+	function loadPartials() {
+		$allPost.load( "partials/all.html" );
+	}
 
-	$( '#partials-content' ).load( "partials/all.html" );
+	/**
+	 * Sub navigation toggle to filter photos and videos
+	 *
+	 * @param e
+	 */
+	function filterPosts() {
 
-
-	function filterPosts() { //Sub Nav filter bar to display photos and videos.
-
-		$( "#filterbar" ).click( function () {
+		$filterBar.click( function () {
 			$( ".panel" ).show().css( "display", "inline-block" );
 			$( "#filterbar a" ).parent().removeClass( "active" );
-			$( this ).find('li:first' ).addClass( "active" );
-			console.log($( this ));
+			$( this ).find( 'li:first' ).addClass( "active" );
 			return false;
 		} );
 
@@ -38,27 +65,35 @@ $( document ).ready( function () {
 			var thisFilter = $( this ).attr( "id" );
 			$( ".panel" ).hide();
 			$( "." + thisFilter ).fadeIn().css( "display", "inline-block" );
-			$( "#filterbar" ).find( 'a' ).parent().removeClass( "active" );
+			$filterBar.find( 'a' ).parent().removeClass( "active" );
 			$( this ).parent().addClass( "active" );
 			return false;
 		} );
 	}
 
+	/**
+	 * Toggle view to switch between tile and list view
+	 *
+	 * @param e
+	 */
 
-	function toggleView() { // Toggle view to switch between tile and list view
-
-		$( '.view-nav__item' ).on( 'click', function (e) {
-			var thisView = $( this ).attr( "id" );
+	function toggleView() {
+		$viewNavItem.on( 'click', function (e) {
 			e.preventDefault();
-			$( '.view-nav__item' ).removeClass( "active" );
+			var thisView = $( this ).attr( "id" );
+			$viewNavItem.removeClass( "active" );
 			$( this ).addClass( "active" );
-			$( '#ss-all-posts' ).removeClass( 'view-list' ).removeClass( 'view-tile' ).addClass( thisView );
+			$( '#ss-all-posts' ).removeClass( 'view-list view-tile' ).addClass( thisView );
 		} );
 
 	}
 
-
-	// Modal windows
+	/**
+	 * Modal windows
+	 *
+	 * @param e
+	 */
+	//
 	// I know it's not pretty, need to refactor these. There's a better way.
 	var myContent1 = document.getElementById( 'meg-photo' ),
 		myContent2 = document.getElementById( 'jenny-photo' ),
@@ -96,31 +131,31 @@ $( document ).ready( function () {
 		} );
 
 
-	$( '.main-content' ).on( 'click', "#modal-trigger-meg", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-meg", function (e) {
 		e.preventDefault();
 		myModal1.open();
 	} );
-	$( '.main-content' ).on( 'click', "#modal-trigger-jenny", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-jenny", function (e) {
 		e.preventDefault();
 		myModal2.open();
 	} );
-	$( '.main-content' ).on( 'click', "#modal-trigger-buzz", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-buzz", function (e) {
 		e.preventDefault();
 		myModal3.open();
 	} );
-	$( '.main-content' ).on( 'click', "#modal-trigger-samihah", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-samihah", function (e) {
 		e.preventDefault();
 		myModal4.open();
 	} );
-	$( '.main-content' ).on( 'click', "#modal-trigger-jac", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-jac", function (e) {
 		e.preventDefault();
 		myModal5.open();
 	} );
-	$( '.main-content' ).on( 'click', "#modal-trigger-vitor", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-vitor", function (e) {
 		e.preventDefault();
 		myModal6.open();
 	} );
-	$( '.main-content' ).on( 'click', "#modal-trigger-michael", function (e) {
+	$mainContent.on( 'click', "#modal-trigger-michael", function (e) {
 		e.preventDefault();
 		myModal7.open();
 	} );
@@ -129,47 +164,54 @@ $( document ).ready( function () {
 		myModal8.open();
 	} );
 
+	/**
+	 * Mobile Menu
+	 *
+	 * @param e
+	 */
+	function toggleCanvasMenu() {
+		if (isOpen) {
+			classie.remove( bodyElement, 'ss-mobile-menu-active' );
+		}
+		else {
+			classie.add( bodyElement, 'ss-mobile-menu-active' );
+		}
+		isOpen = !isOpen;
+	}
 
 	function initCanvasMenu() {
 		toggleMobileMenu.addEventListener( 'click', toggleCanvasMenu );
-
-		// close the menu
-		contentWrap.addEventListener( 'click', function (ev) {
-			var target = ev.target;
+		contentWrap.addEventListener( 'click', function (e) {
+			var target = e.target;
 			if (isOpen && target !== toggleMobileMenu) {
 				toggleCanvasMenu();
 			}
 		} );
 	}
 
-	function toggleCanvasMenu() {
-		if (isOpen) {
-			classie.remove( bodyElement, 'show-menu' );
-		}
-		else {
-			classie.add( bodyElement, 'show-menu' );
-		}
-		isOpen = !isOpen;
-	}
-
-
+	/**
+	 * IE detection
+	 *
+	 * @param e
+	 */
 	function detectIe() {
 		"use strict";
 
 		// Detecting IE
 		var oldIE;
-		if ($( 'html' ).is( '.ie6, .ie7, .ie8, .ie9' )) {
+		if ($html.is( '.ie6, .ie7, .ie8, .ie9' )) {
 			oldIE = true;
 		}
 		if (oldIE) {
-			$( '.menu-wrap' ).hide();
-			$( '#js-mobile-menu' ).on( 'click', function (e) {
-				$( '.menu-wrap' ).toggle();
+			$mobileMenuWrapper.hide();
+			$mobileMenuToggle.on( 'click', function (e) {
+				$mobileMenuWrapper.toggle();
 			} );
 		}
 	}
 
 	function init() {
+		loadPartials();
 		initCanvasMenu();
 		filterPosts();
 		toggleView();
@@ -178,4 +220,4 @@ $( document ).ready( function () {
 	}
 
 	init();
-} );
+})( window, jQuery, undefined );
