@@ -24,7 +24,6 @@
 	<a href="http://browsehappy.com/">upgrade
 		your browser</a> to improve your experience.</p>
 <![endif]-->
-
 <div class="ss-mobile-header">
 	<div class="mobile-header-inner">
 		<div class="message-mobile-btn">
@@ -41,62 +40,87 @@
 			</a>
 		</div>
 
-		<div class="menu-btn">
-			<a href="#" id="main-nav" class="icon-menu ">Menu</a>
-		</div>
+
+		<button class="menu-btn" id="js-mobile-menu">Open Menu</button>
+
 	</div>
 </div>
 <!--end .ss-mobile-header-->
-
-<header class="page-header">
-	<div class="container">
-
-		<h1 class="logo">
-			<a href="#">
-				<img src="assets/img/main-logo.png" alt="" />
-			</a>
-		</h1>
-
-		<div class="right-nav">
-
-			<div class="my-account dropdown-menu">
-				<a class="avatar " href="">
-					<img src="assets/img/avatar-1.png" alt="" />
-					<span class="caret"></span>
-				</a>
-				<ul class="sub-nav">
-					<li><a href="">Profile</a></li>
-					<li><a href="">Following</a></li>
-					<li><a href="">Followers</a></li>
-					<li><a href="">Setting</a></li>
-				</ul>
-			</div>
-
-			<div class="ss-search-bar">
-				<form role="search" method="get" action="">
-					<input type="text" placeholder="" class="search-input" />
-					<button type="submit" class="search-btn"></button>
-				</form>
-			</div>
-			<a href="#" class="new-message-btn">New message</a>
+<div class="container-a outer-wrapper">
+<aside class="menu-wrap">
+	<nav class="menu">
+		<ul class="canvas-list">
+			<li><a href="#"><span>Profile</span></a></li>
+			<li><a href="#"><span>Following</span></a></li>
+			<li><a href="#"><span>Messages</span></a></li>
+			<li><a href="#"><span>Followers</span></a></li>
+			<li><a href="#"><span>Settings</span></a></li>
+		</ul>
+	</nav>
+	<!--<button class="close-button" id="close-button">Close Menu</button>-->
+	<div class="mobile-search">
+		<div class="ss-search-bar">
+			<form role="search" method="get" action="">
+				<input type="text" placeholder="Search" class="search-input" />
+				<button type="submit" class="search-btn"></button>
+			</form>
 		</div>
-		<!-- end .righ-nav -->
+
 
 	</div>
-</header>
-<!-- end .page-header -->
+</aside>
+<div class="content-wrap canvas-content-wrap">
 
-<div class="content">
-	<div class="hero-header">
+
+	<header class="page-header">
 		<div class="container">
-			<div class="compose-post">
 
-				<!--<span class="input">-->
-				<!--<input class="input-field" type="text" id="input-1" />-->
-				<!--<label class="input-label" for="input-1">-->
-				<!--<span class="input-label-content">What's on your mind?</span>-->
-				<!--</label>-->
-				<!--</span>-->
+			<h1 class="logo">
+				<a href="#">
+					<img src="assets/img/main-logo.png" alt="" />
+				</a>
+			</h1>
+
+			<div class="right-nav">
+
+				<div class="my-account dropdown-menu">
+					<a class="avatar " href="">
+						<img src="assets/img/avatar-1.png" alt="" />
+						<span class="caret"></span>
+					</a>
+					<ul class="sub-nav">
+						<li><a href="">Profile</a></li>
+						<li><a href="">Following</a></li>
+						<li><a href="">Followers</a></li>
+						<li><a href="">Setting</a></li>
+					</ul>
+				</div>
+
+				<div class="ss-search-bar">
+					<form role="search" method="get" action="">
+						<input type="text" placeholder="" class="search-input" />
+						<button type="submit" class="search-btn"></button>
+					</form>
+				</div>
+				<a href="#" class="new-message-btn">New message</a>
+			</div>
+			<!-- end .righ-nav -->
+
+		</div>
+	</header>
+	<!-- end .page-header -->
+
+	<div class="content-main">
+		<div class="hero-header">
+			<div class="container">
+				<div class="compose-post">
+
+					<!--<span class="input">-->
+					<!--<input class="input-field" type="text" id="input-1" />-->
+					<!--<label class="input-label" for="input-1">-->
+					<!--<span class="input-label-content">What's on your mind?</span>-->
+					<!--</label>-->
+					<!--</span>-->
 
 
 			<span class="input input--akira">
@@ -107,83 +131,83 @@
 				</span>
 
 
-				<div class="add-attachment">
-					<ul>
-						<li><a href="">Add Photo</a></li>
-						<li><a href="">Add Video</a></li>
-					</ul>
+					<div class="add-attachment">
+						<ul>
+							<li><a href="">Add Photo</a></li>
+							<li><a href="">Add Video</a></li>
+						</ul>
+					</div>
+
+					<!--<textarea aria-hidden="true" class="" name="status"></textarea>-->
 				</div>
-
-				<!--<textarea aria-hidden="true" class="" name="status"></textarea>-->
 			</div>
-		</div>
 
+
+		</div>
+		<!-- end .hero-header -->
+
+		<div class="page-content">
+			<nav class="sub-nav">
+				<ul class="filter-nav" id="filterbar">
+					<li class="filter-nav__item active">
+						<a class="" href="#" id="post-all"><span class="icon-comment icon"></span><span>All Posts</span></a>
+					</li>
+					<li class="filter-nav__item">
+						<a class="filter" href="#" id="post-photo"><span class="icon-camera-outline icon"></span><span>Photos<span></a>
+					</li>
+					<li class="filter-nav__item">
+						<a class="filter" href="#" id="post-video"><span class="icon-videocam icon"></span><span>Videos<span></a>
+					</li>
+				</ul>
+				<ul class="view-nav">
+					<li><a class="view-nav__item " href="" id="view-tile"><span class="icon-th-large"></span></a>
+					</li>
+					<li><a class="view-nav__item active" href="" id="view-list"><span class="icon-menu"></span></a></li>
+				</ul>
+			</nav>
+
+			<!--<p id="catpicker">-->
+			<!--<a href="#" id="allcat" class="current">VIEW ALL</a> |-->
+			<!--<a href="#" id="video" class="filter">video Pricing</a> |-->
+			<!--<a href="#" id="photo" class="filter">photo Shipping</a> |-->
+			<!--</p>-->
+
+			<div class="main-content">
+				<div class="container" id="partials-content">
+					<!-- ===== Load  content from /partials ===== -->
+				</div>
+			</div>
+			<!-- end .main-content -->
+
+		</div>
+		<!-- end .page-content -->
 
 	</div>
-	<!-- end .hero-header -->
+	<!-- end .content -->
 
-	<div class="page-content">
-		<nav class="sub-nav">
-			<ul class="filter-nav" id="filterbar">
-				<li class="filter-nav__item active">
-					<a class="" href="#" id="post-all"><span class="icon-comment icon"></span><span>All Posts</span></a>
-				</li>
-				<li class="filter-nav__item">
-					<a class="filter" href="#" id="post-photo"><span class="icon-camera-outline icon"></span><span>Photos<span></a>
-				</li>
-				<li class="filter-nav__item">
-					<a class="filter" href="#" id="post-video"><span class="icon-videocam icon"></span><span>Videos<span></a>
-				</li>
-			</ul>
-			<ul class="view-nav">
-				<li><a class="view-nav__item " href="" id="view-tile"><span class="icon-th-large"></span></a>
-				</li>
-				<li><a class="view-nav__item active" href="" id="view-list"><span class="icon-menu"></span></a></li>
-			</ul>
-		</nav>
-
-		<!--<p id="catpicker">-->
-		<!--<a href="#" id="allcat" class="current">VIEW ALL</a> |-->
-		<!--<a href="#" id="video" class="filter">video Pricing</a> |-->
-		<!--<a href="#" id="photo" class="filter">photo Shipping</a> |-->
-		<!--</p>-->
-
-		<div class="main-content">
-			<div class="container" id="partials-content">
-				<!-- ===== Load  content from /partials ===== -->
-			</div>
-		</div>
-		<!-- end .main-content -->
-
-	</div>
-	<!-- end .page-content -->
-
-</div>
-<!-- end .content -->
-
-<footer class="page-footer">
-	<ul class="footer-links footer-links-social">
-		<li>
-			<a href="" class="icon">About Us</a>
-		</li>
-		<li>
-			<a href="" class="icon">Support</a>
-		</li>
-		<li>
-			<a href="" class="icon">Privacy</a>
-		</li>
-		<li>
-			<a href="" class="icon">Terms</a>
-		</li>
-		<li>&copy; 2015 SimplySocial</li>
-	</ul>
-</footer>
-<!-- end .page-footer -->
+	<footer class="page-footer">
+		<ul class="footer-links footer-links-social">
+			<li>
+				<a href="" class="icon">About Us</a>
+			</li>
+			<li>
+				<a href="" class="icon">Support</a>
+			</li>
+			<li>
+				<a href="" class="icon">Privacy</a>
+			</li>
+			<li>
+				<a href="" class="icon">Terms</a>
+			</li>
+			<li>&copy; 2015 SimplySocial</li>
+		</ul>
+	</footer>
+	<!-- end .page-footer -->
 
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!--<script src="assets/js/classie.js"></script>-->
+<script src="assets/js/classie.js"></script>
 <script src="assets/js/modal.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
@@ -223,326 +247,331 @@
 <div id="partials-modal-content">
 
 
-	<div id="meg-photo" class="modal-photo">
+<div id="meg-photo" class="modal-photo">
 
-		<div class="post-image modal-image">
-			<img src="assets/img/photos/large/beach.jpg" alt="beach" />
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/meg.png" alt="" />
-						<span>Meg Robichaud</span></a>
+	<div class="post-image modal-image">
+		<img src="assets/img/photos/large/beach.jpg" alt="beach" />
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/meg.png" alt="" />
+					<span>Meg Robichaud</span></a>
 
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
 				</div>
-				<div class="post-content">
-					<p>My view this morning is simply beautiful...
-						<a href="http://instagram.com/p/mV0PUrHRwQ/">instagram.com/p/mV0PUrHRwQ/</a></p>
-				</div>
-
 			</div>
-			<!--end .post-main -->
+			<div class="post-content">
+				<p>My view this morning is simply beautiful...
+					<a href="http://instagram.com/p/mV0PUrHRwQ/">instagram.com/p/mV0PUrHRwQ/</a></p>
+			</div>
+
 		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
+		<!--end .post-main -->
 	</div>
 
-
-	<div id="jenny-photo" class="modal-photo">
-
-		<div class="post-image modal-image">
-			<img src="assets/img/photos/large/portrait.jpg" alt="beach" />
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/jenny.png" alt="" />
-						<span>Jenny Shen</span></a>
-
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-content">
-					<p>Perfect day to be outside taking pictures
-						<a href="http://bit.ly/1lE4uJc">instagram.com/p/mV0PUrHRwQ/</a>
-						!</p>
-				</div>
-
-			</div>
-			<!--end .post-main -->
-		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
 	</div>
 
-
-	<div id="buzz-photo" class="modal-photo">
-
-		<div class="post-image modal-image">
-			<img src="assets/img/photos/large/road-trip.jpg" alt="road-trip" />
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/buzz.png" alt="" />
-						<span>Buzz Usborne</span></a>
-
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-content">
-					<p>Road trip! <a href="http://bit.ly/1lE4uJc">bit.ly/1hkXFdK</a>
-					</p>
-				</div>
-
-			</div>
-			<!--end .post-main -->
-		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
-	</div>
-
-
-	<div id="samihah-photo" class="modal-photo">
-
-		<div class="post-image modal-image">
-			<img src="assets/img/photos/large/dandelion.jpg" alt="road-trip" />
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/samihah.png" alt="" />
-						<span>Jacqueline Saik</span></a>
-
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-content">
-					<p>Love this picture <a href="">instagram.com/p/mV0PUrHRwQ/
-					</a></p>
-				</div>
-
-			</div>
-			<!--end .post-main -->
-		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
-	</div>
-
-
-	<div id="jac-video" class="modal-video">
-
-		<div class="post-image video-wrap">
-			<iframe src="//player.vimeo.com/video/120562699" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/jac.png" alt="" />
-						<span>Jacqueline Saik</span></a>
-
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-content">
-					<p>I love this little guy! <a href="http://bit.ly/1lE4uJc">vimeo.com/p/mV0PUrHRwQ/</a>
-				</div>
-
-			</div>
-			<!--end .post-main -->
-		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
-	</div>
-
-
-	<div id="michael-video" class="modal-video">
-
-		<div class="post-image video-wrap">
-			<iframe src="//player.vimeo.com/video/119318850?badge=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/michael.png" alt="" />
-						<span>Michael Wong</span></a>
-
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-content">
-					<p>Awesome! Check this out. <a href="http://bit.ly/1lE4uJc">instagram.com/p/mV0PUrHRwQ/</a>
-				</div>
-
-			</div>
-			<!--end .post-main -->
-		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
-	</div>
-
-	<div id="vitor-video" class="modal-video">
-
-		<div class="post-image video-wrap">
-			<iframe src="//player.vimeo.com/video/59179537" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		</div>
-		<div class="modal-post-content post-main">
-			<div class="post-body">
-				<div class="post-header-wrap">
-					<a href="" class="post-author">
-						<img class="post-avatar" src="assets/img/avatar/40/vitor.png" alt="" />
-						<span>Vitor Leal</span></a>
-
-					<div class="post-meta top">
-						<ul>
-							<li><a href="" class="post-action-btn reply">reply</a></li>
-							<li>
-								<a href="" class="post-action-btn favorite">favorite</a>
-							</li>
-							<li>
-								<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="post-content">
-					<p>You have to see this bike. It will make your daily commute a absolute joy ride!
-						<a href="vimeo.com/p/mV0PUrHRwQ/">vimeo.com/p/mV0PUrHRwQ/
-						</a></p>
-				</div>
-
-			</div>
-			<!--end .post-main -->
-		</div>
-
-		<!--end .post-image -->
-		<div class="post-new">
-			<form class="ss-form">
-				<p class="fieldset">
-					<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
-				</p>
-			</form>
-		</div>
-
-
-	</div>
 
 </div>
+
+
+<div id="jenny-photo" class="modal-photo">
+
+	<div class="post-image modal-image">
+		<img src="assets/img/photos/large/portrait.jpg" alt="beach" />
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/jenny.png" alt="" />
+					<span>Jenny Shen</span></a>
+
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				<p>Perfect day to be outside taking pictures
+					<a href="http://bit.ly/1lE4uJc">instagram.com/p/mV0PUrHRwQ/</a>
+					!</p>
+			</div>
+
+		</div>
+		<!--end .post-main -->
+	</div>
+
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
+	</div>
+
+
+</div>
+
+
+<div id="buzz-photo" class="modal-photo">
+
+	<div class="post-image modal-image">
+		<img src="assets/img/photos/large/road-trip.jpg" alt="road-trip" />
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/buzz.png" alt="" />
+					<span>Buzz Usborne</span></a>
+
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				<p>Road trip! <a href="http://bit.ly/1lE4uJc">bit.ly/1hkXFdK</a>
+				</p>
+			</div>
+
+		</div>
+		<!--end .post-main -->
+	</div>
+
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
+	</div>
+
+
+</div>
+
+
+<div id="samihah-photo" class="modal-photo">
+
+	<div class="post-image modal-image">
+		<img src="assets/img/photos/large/dandelion.jpg" alt="road-trip" />
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/samihah.png" alt="" />
+					<span>Jacqueline Saik</span></a>
+
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				<p>Love this picture <a href="">instagram.com/p/mV0PUrHRwQ/
+				</a></p>
+			</div>
+
+		</div>
+		<!--end .post-main -->
+	</div>
+
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
+	</div>
+
+
+</div>
+
+
+<div id="jac-video" class="modal-video">
+
+	<div class="post-image video-wrap">
+		<iframe src="//player.vimeo.com/video/120562699" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/jac.png" alt="" />
+					<span>Jacqueline Saik</span></a>
+
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				<p>I love this little guy! <a href="http://bit.ly/1lE4uJc">vimeo.com/p/mV0PUrHRwQ/</a>
+			</div>
+
+		</div>
+		<!--end .post-main -->
+	</div>
+
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
+	</div>
+
+
+</div>
+
+
+<div id="michael-video" class="modal-video">
+
+	<div class="post-image video-wrap">
+		<iframe src="//player.vimeo.com/video/119318850?badge=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/michael.png" alt="" />
+					<span>Michael Wong</span></a>
+
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				<p>Awesome! Check this out. <a href="http://bit.ly/1lE4uJc">instagram.com/p/mV0PUrHRwQ/</a>
+			</div>
+
+		</div>
+		<!--end .post-main -->
+	</div>
+
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
+	</div>
+
+
+</div>
+
+<div id="vitor-video" class="modal-video">
+
+	<div class="post-image video-wrap">
+		<iframe src="//player.vimeo.com/video/59179537" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<div class="modal-post-content post-main">
+		<div class="post-body">
+			<div class="post-header-wrap">
+				<a href="" class="post-author">
+					<img class="post-avatar" src="assets/img/avatar/40/vitor.png" alt="" />
+					<span>Vitor Leal</span></a>
+
+				<div class="post-meta top">
+					<ul>
+						<li><a href="" class="post-action-btn reply">reply</a></li>
+						<li>
+							<a href="" class="post-action-btn favorite">favorite</a>
+						</li>
+						<li>
+							<a href="" class="post-action-time "><span class="" aria-hidden="true">25m</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="post-content">
+				<p>You have to see this bike. It will make your daily commute a absolute joy ride!
+					<a href="vimeo.com/p/mV0PUrHRwQ/">vimeo.com/p/mV0PUrHRwQ/
+					</a></p>
+			</div>
+
+		</div>
+		<!--end .post-main -->
+	</div>
+
+	<!--end .post-image -->
+	<div class="post-new">
+		<form class="ss-form">
+			<p class="fieldset">
+				<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Reply...">
+			</p>
+		</form>
+	</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+<!-- /content-wrap -->
+</div><!-- /container a -->
 </body>
 </html>

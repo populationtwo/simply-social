@@ -2,7 +2,7 @@
 
 //var bodyEl = document.body,
 //	//content = document.querySelector( '.content-wrap' ),
-//	openbtn = document.getElementById( 'main-nav' ),
+//	toggleMobileMenu = document.getElementById( 'main-nav' ),
 //	closebtn = document.getElementById( 'close-button' ),
 //	isOpen = false;
 
@@ -39,7 +39,7 @@ $( document ).ready( function () {
 //	isOpen = false;
 
 	function init() {
-		//initEvents();
+		initEvents();
 		filterPosts();
 		toggleView();
 
@@ -167,11 +167,62 @@ $( document ).ready( function () {
 		myModal7.open();
 	} );
 
+
+
+
+
+
+
+
+
+
+	var bodyEl = document.body,
+		content = document.querySelector( '.content-wrap' ),
+		toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
+		closebtn = document.getElementById( 'close-button' ),
+		isOpen = false;
+
+
+	function initEvents() {
+		toggleMobileMenu.addEventListener( 'click', toggleMenu );
+		if( closebtn ) {
+			closebtn.addEventListener( 'click', toggleMenu );
+		}
+
+		// close the menu element if the target it´s not the menu element or one of its descendants..
+		content.addEventListener( 'click', function(ev) {
+			var target = ev.target;
+			if( isOpen && target !== toggleMobileMenu ) {
+				toggleMenu();
+			}
+		} );
+	}
+
+	function toggleMenu() {
+		if( isOpen ) {
+			classie.remove( bodyEl, 'show-menu' );
+		}
+		else {
+			classie.add( bodyEl, 'show-menu' );
+		}
+		isOpen = !isOpen;
+	}
+
+
+
+
+
+
+
+
+
+
+
 	init();
 } );
 
 //function initEvents() {
-//	openbtn.addEventListener( 'click', toggleMenu );
+//	toggleMobileMenu.addEventListener( 'click', toggleMenu );
 //	if( closebtn ) {
 //		closebtn.addEventListener( 'click', toggleMenu );
 //	}
@@ -179,7 +230,7 @@ $( document ).ready( function () {
 //	// close the menu element if the target it´s not the menu element or one of its descendants..
 //	content.addEventListener( 'click', function(ev) {
 //		var target = ev.target;
-//		if( isOpen && target !== openbtn ) {
+//		if( isOpen && target !== toggleMobileMenu ) {
 //			toggleMenu();
 //		}
 //	} );

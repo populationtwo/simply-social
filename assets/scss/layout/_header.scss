@@ -1,7 +1,7 @@
 .logo {
 	float: left;
 	margin: rem-calc(17) 0 rem-calc(18);
-	padding: 0;
+	padding: 0 0 0 15px;
 	line-height: normal;
 	img {
 		max-width: 100%;
@@ -45,6 +45,7 @@
 		background: transparent;
 		color: white(0.4);
 		font-size: rem-calc(14);
+
 		&:focus {
 			background: #e4e2e2;
 			color: #000;
@@ -61,7 +62,13 @@
 		margin: -12px 0 0 -30px;
 	}
 }
-
+.mobile-search .ss-search-bar {
+	float: none;
+	margin: 15px 0;
+	.search-input {
+		width: 100%;
+	}
+}
 .avatar {
 	&:hover {
 		text-decoration: none;
