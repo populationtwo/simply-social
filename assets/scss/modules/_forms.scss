@@ -1,6 +1,10 @@
-textarea:focus, input:focus{
+/* --------------------------------------------------------------
+	All Forms
+-------------------------------------------------------------- */
+textarea:focus, input:focus {
 	outline: 0;
 }
+
 .ss-form {
 	padding: rem-calc(24) rem-calc(20);
 	border-top: 1px solid black(0.05);
@@ -62,8 +66,7 @@ textarea:focus, input:focus{
 			border: 1px solid transparent;
 
 			&:focus {
-				//				border-color: #FFF;
-				//				box-shadow: 0 0 5px black(0.1);
+
 				outline: none;
 			}
 		}
@@ -85,7 +88,8 @@ textarea:focus, input:focus{
 		height: rem-calc(150);
 		border: none;
 		resize: none;
-		overflow: auto;		padding: rem-calc(12) 0;
+		overflow: auto;
+		padding: rem-calc(12) 0;
 
 		&::-webkit-input-placeholder {
 			/* WebKit browsers */
@@ -100,7 +104,7 @@ textarea:focus, input:focus{
 			/* Internet Explorer 10+ */
 			color: white(0.5);
 		}
-		@include breakpoint($medium-screen){
+		@include breakpoint($medium-screen) {
 			height: rem-calc(80);
 		}
 		&.has-border {
@@ -108,8 +112,6 @@ textarea:focus, input:focus{
 			border: 1px solid transparent;
 
 			&:focus {
-				//				border-color: #FFF;
-				//				box-shadow: 0 0 5px black(0.1);
 				outline: none;
 			}
 		}

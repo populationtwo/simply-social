@@ -1,44 +1,22 @@
 /* --------------------------------------------------------------
-	Theme Variables
+	Variables
 -------------------------------------------------------------- */
 
 /**
  * Colors
  */
-$primary 	: #363A40; 		/* dark blue */
-$highlight	: #ff3c1f; 		/* orange red */
-$secondary 	: #387C9D; 		/* medium blue */
-$accent		: #cfdf36; 		/* bright green */
-$bold		: #222222; 		/* dark grey */
-$read		: #666666; 		/* medium grey */
-$contrast	: #999999; 		/* light grey */
-$black15	: black(0.15);  /* 15% black */
-$shade		: #f1f1f2; 		/* off white */
-$green		: #3dab28;
-$blue 		: #0074cc;
-
-
-
 $caribbean-green : #00CC99;
 $deep-sea : #008060;
 $shark: #262728;
-
 $gray-darker:  #222;
 $gray-dark:    #333;
 $gray:         #444;
 $gray-light:   #999;
 $gray-lighter: #dee1e5;
-
 $pale-sky: #70767f;
 $loblolly : #bec3cc;
 $athens-gray: #f9fafb;
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
-
-
-
-/**
- * Typography
- */
 
 
 /**
@@ -47,10 +25,3 @@ $athens-gray: #f9fafb;
 $medium-screen 	: 40.063em; 	//641px
 $large-screen 	: 64.063em; 	//1025px
 $xlarge-screen 	: 90.063em; 	//1440px
-
-/**
- * misc
- */
-//$site-width		: 1050px;
-//$transition		: .25s ease;
-//$border-width	: 1px;

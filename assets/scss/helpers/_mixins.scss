@@ -1,94 +1,8 @@
-//@mixin breakpoint($breakpoint) {
-//	@media screen and (min-width: $breakpoint) {
-//		@content;
-//	}
-//}
-//
-//// ---------------
-//// Arrows
-//// $direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
-//// $color: hex, rgb or rbga
-//// $size: px or em
-//// EXAMPLES:
-////		&:before { @include arrow(right, #000, 12px); }
-////		&:after { @include arrow(right, #000, 9px); }
-////		.element { @include arrow(top, #000, 50px); }
-//// ---------------
-//@mixin arrow($direction, $color, $size) {
-//	display: block;
-//	height: 0;
-//	width: 0;
-//
-//	@if $direction == 'top' {
-//		border-left: $size solid transparent;
-//		border-right: $size solid transparent;
-//		border-bottom: $size solid $color;
-//	} @else if $direction == 'right' {
-//		border-top: $size solid transparent;
-//		border-bottom: $size solid transparent;
-//		border-left: $size solid $color;
-//	} @else if $direction == 'bottom' {
-//		border-top: $size solid $color;
-//		border-right: $size solid transparent;
-//		border-left: $size solid transparent;
-//	} @else if $direction == 'left' {
-//		border-top: $size solid transparent;
-//		border-right: $size solid $color;
-//		border-bottom: $size solid transparent;
-//	} @else if $direction == 'top-left' {
-//		border-top: $size solid $color;
-//		border-right: $size solid transparent;
-//	} @else if $direction == 'top-right' {
-//		border-top: $size solid $color;
-//		border-left: $size solid transparent;
-//	} @else if $direction == 'bottom-left' {
-//		border-bottom: $size solid $color;
-//		border-right: $size solid transparent;
-//	} @else if $direction == 'bottom-right' {
-//		border-bottom: $size solid $color;
-//		border-left: $size solid transparent;
-//	}
-//}
-//
-//@mixin ellipsis() {
-//	text-overflow: ellipsis;
-//	overflow: hidden;
-//	white-space: nowrap;
-//}
-//
-//@mixin multiline-ellipsis($height, $line-height, $ellipsis-width) {
-//
-//	$ellipsis-width: 3em !default;
-//	max-height: $height;
-//	line-height: $line-height;
-//	overflow: hidden;
-//	position: relative;
-//
-//	&:after {
-//		@include css-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1.0));
-//		content: "\02026";
-//		float: right;
-//		right: 0;
-//		padding-left: ($ellipsis-width);
-//		position: absolute;
-//		text-align: right;
-//		bottom: 0;
-//		width: ($ellipsis-width);
-//		z-index: 99;
-//		color: $gray-light;
-//	}
-//
-//	.ellipsis > *:first-child {
-//		float: right;
-//		margin-left: -5px;
-//		width: 100%;
-//	}
-//}
-//
-//
+/* --------------------------------------------------------------
+	Sass Mixins
+-------------------------------------------------------------- */
 
-$max-width: 1200px!default;
-
+$max-width: 1200px !default;
 
 %clearfix {
 	*zoom: 1;
@@ -100,35 +14,6 @@ $max-width: 1200px!default;
 		clear: both;
 	}
 }
-
-
-
-@mixin outer-container($local-max-width: $max-width) {
-	@extend %clearfix;
-	max-width: $local-max-width;
-	margin: {
-		left: auto;
-		right: auto;
-	}
-}
-
-
-
-
-@mixin breakpoint($breakpoint) {
-	@media screen and (min-width: $breakpoint) {
-		@content;
-	}
-}
-
-
-.image-replace {
-	border: 0;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-}
-
 
 %inline-list {
 	margin: 0 auto;
@@ -147,10 +32,18 @@ $max-width: 1200px!default;
 		}
 	}
 }
-@mixin placeholder {
-	::-webkit-input-placeholder {@content}
-	:-moz-placeholder           {@content}
-	::-moz-placeholder          {@content}
-	:-ms-input-placeholder      {@content}
+
+@mixin outer-container($local-max-width: $max-width) {
+	@extend %clearfix;
+	max-width: $local-max-width;
+	margin: {
+		left: auto;
+		right: auto;
+	}
 }
 
+@mixin breakpoint($breakpoint) {
+	@media screen and (min-width: $breakpoint) {
+		@content;
+	}
+}

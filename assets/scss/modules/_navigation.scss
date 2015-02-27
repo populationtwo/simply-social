@@ -1,4 +1,6 @@
-
+/* --------------------------------------------------------------
+	Navigation
+-------------------------------------------------------------- */
 .sub-nav {
 	@include outer-container(580px);
 	margin-top: rem-calc(-75);
@@ -28,7 +30,6 @@
 		margin-left: 0;
 		float: left;
 		width: 60%;
-
 
 	}
 	a {
@@ -79,7 +80,7 @@
 	font-size: rem-calc(30);
 	display: none;
 	@include breakpoint($medium-screen) {
-				font-size: rem-calc(16);
+		font-size: rem-calc(16);
 		display: block;
 	}
 
@@ -92,9 +93,7 @@
 	&__item {
 		@include single-transition(border, 0.2s, ease-in);
 		opacity: 0.75;
-
 		&:hover, &.active {
-			//			border-bottom: 4px solid $caribbean-green;
 			opacity: 1;
 
 		}
@@ -102,9 +101,6 @@
 	li {
 		margin: 0;
 		float: right;
-		@include breakpoint($medium-screen) {
-			//			margin-right: rem-calc(20);
-		}
 
 	}
 }

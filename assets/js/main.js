@@ -1,80 +1,51 @@
-//(function() {
-
-//var bodyEl = document.body,
-//	//content = document.querySelector( '.content-wrap' ),
-//	toggleMobileMenu = document.getElementById( 'main-nav' ),
-//	closebtn = document.getElementById( 'close-button' ),
-//	isOpen = false;
-
-
-//
-//
-
-$( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
-
-//$('.js-btn-expand' ).on('click',function(e){
-	e.preventDefault();
-	var thisComments = $( this ).parent().siblings( ".js-post-replies" );
-	var thisComments2 = $( this ).parent().siblings( ".js-post-replies:visible" );
-	if (thisComments2.length) {
-		thisComments.slideUp( 200 );
-		$( this ).toggleClass( 'up' );
-
-	} else {
-		thisComments.slideDown( 200 );
-		$( this ).toggleClass( 'up' );
-
-	}
-
-} );
-
-
 $( document ).ready( function () {
 
-//$('.compose-post' ).addClass('fadeInDown');
-	//var bodyEl = document.body,
-	//content = document.querySelector( '.content-wrap' ),
-	//var filterBar = document.getElementById( 'filterbar' )
-//	closebtn = document.getElementById( 'close-button' ),
-//	isOpen = false;
+	var bodyElement = document.body,
+		contentWrap = document.querySelector( '.content-wrap' ),
+		toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
+		isOpen = false;
 
-	function init() {
-		initEvents();
-		filterPosts();
-		toggleView();
-
+	function showReplies() { // Toggle to display post replies
+		$( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
+			e.preventDefault();
+			var thisComments = $( this ).parent().siblings( ".js-post-replies" );
+			var thisCommentsVisible = $( this ).parent().siblings( ".js-post-replies:visible" );
+			if (thisCommentsVisible.length) {
+				thisComments.slideUp( 200 );
+				$( this ).toggleClass( 'up' );
+			} else {
+				thisComments.slideDown( 200 );
+				$( this ).toggleClass( 'up' );
+			}
+		} );
 	}
 
 
 	$( '#partials-content' ).load( "partials/all.html" );
-	//$( '#partials-modal-content' ).load( "partials/modals.html" );
 
 
-	//document.getElementById( "#partials-modal-content" ).innerHTML = '<object type="type/html" data="partials/modals.html"></object>'
-
-
-	function filterPosts() {
-		//Sub Nav filter bar
+	function filterPosts() { //Sub Nav filter bar to display photos and videos.
 
 		$( "#filterbar" ).click( function () {
-			$( ".panel" ).show();
+			$( ".panel" ).show().css( "display", "inline-block" );
 			$( "#filterbar a" ).parent().removeClass( "active" );
-			$( this ).parent().addClass( "active" );
+			$( this ).find('li:first' ).addClass( "active" );
+			console.log($( this ));
 			return false;
 		} );
 
 		$( ".filter" ).click( function () {
 			var thisFilter = $( this ).attr( "id" );
 			$( ".panel" ).hide();
-			$( "." + thisFilter ).fadeIn();
-			$( "#filterbar a" ).parent().removeClass( "active" );
+			$( "." + thisFilter ).fadeIn().css( "display", "inline-block" );
+			$( "#filterbar" ).find( 'a' ).parent().removeClass( "active" );
 			$( this ).parent().addClass( "active" );
 			return false;
 		} );
 	}
 
 
-	function toggleView() {
+	function toggleView() { // Toggle view to switch between tile and list view
 
 		$( '.view-nav__item' ).on( 'click', function (e) {
 			var thisView = $( this ).attr( "id" );
@@ -83,66 +54,46 @@ $( document ).ready( function () {
 			$( this ).addClass( "active" );
 			$( '#ss-all-posts' ).removeClass( 'view-list' ).removeClass( 'view-tile' ).addClass( thisView );
 		} );
-		//$( '#view-tile-toggle' ).on( 'click', function (e) {
-		//	e.preventDefault();
-		//	$('.view-nav__item').removeClass( "active" );
-		//	$(this).addClass( "active" );
-		//	$( '#ss-all-posts' ).removeClass( 'tile, list' ).addClass( 'tile' );
-		//
-		//} );
 
-
-		//$( '#view-list-toggle' ).on( 'click', function (e) {
-		//	e.preventDefault();
-		//	$('.view-nav__item').removeClass( "active" );
-		//	$(this).addClass( "active" );
-		//	$( '#ss-all-posts' ).removeClass( 'list, tile' ).addClass( 'list' );
-		//} );
-		//$( '#view-tile-toggle' ).on( 'click', function (e) {
-		//	e.preventDefault();
-		//	$('.view-nav__item').removeClass( "active" );
-		//	$(this).addClass( "active" );
-		//	$( '#ss-all-posts' ).removeClass( 'tile, list' ).addClass( 'tile' );
-		//
-		//} );
 	}
 
 
-	var myContent1 = document.getElementById( 'meg-photo' );
-	var myContent2 = document.getElementById( 'jenny-photo' );
-	var myContent3 = document.getElementById( 'buzz-photo' );
-	var myContent4 = document.getElementById( 'samihah-photo' );
-	var myContent5 = document.getElementById( 'jac-video' );
-	var myContent6 = document.getElementById( 'vitor-video' );
-	var myContent7 = document.getElementById( 'michael-video' );
-	var myContent8 = document.getElementById( 'compose-message-modal' );
+	// Modal windows
+	// I know it's not pretty, need to refactor these. There's a better way.
+	var myContent1 = document.getElementById( 'meg-photo' ),
+		myContent2 = document.getElementById( 'jenny-photo' ),
+		myContent3 = document.getElementById( 'buzz-photo' ),
+		myContent4 = document.getElementById( 'samihah-photo' ),
+		myContent5 = document.getElementById( 'jac-video' ),
+		myContent6 = document.getElementById( 'vitor-video' ),
+		myContent7 = document.getElementById( 'michael-video' ),
+		myContent8 = document.getElementById( 'compose-message-modal' );
 
 	var myModal1 = new Modal( {
-		content: myContent1
-	} );
-	var myModal2 = new Modal( {
-		content: myContent2
-	} );
-	var myModal3 = new Modal( {
-		content: myContent3
-	} );
-	var myModal4 = new Modal( {
-		content: myContent4
-	} );
-	var myModal5 = new Modal( {
-		content: myContent5
-	} );
-	var myModal6 = new Modal( {
-		content: myContent6
-	} );
-	var myModal7 = new Modal( {
-		content: myContent7
-	} );
-	var myModal8 = new Modal( {
-		content: myContent8,
-		maxWidth: 575
-	} );
-
+			content: myContent1
+		} ),
+		myModal2 = new Modal( {
+			content: myContent2
+		} ),
+		myModal3 = new Modal( {
+			content: myContent3
+		} ),
+		myModal4 = new Modal( {
+			content: myContent4
+		} ),
+		myModal5 = new Modal( {
+			content: myContent5
+		} ),
+		myModal6 = new Modal( {
+			content: myContent6
+		} ),
+		myModal7 = new Modal( {
+			content: myContent7
+		} ),
+		myModal8 = new Modal( {
+			content : myContent8,
+			maxWidth: 575
+		} );
 
 
 	$( '.main-content' ).on( 'click', "#modal-trigger-meg", function (e) {
@@ -173,108 +124,58 @@ $( document ).ready( function () {
 		e.preventDefault();
 		myModal7.open();
 	} );
-	$( '#js-compose-message, #js-compose-message-mobile' ).on( 'click',  function (e) {
+	$( '#js-compose-message, #js-compose-message-mobile' ).on( 'click', function (e) {
 		e.preventDefault();
 		myModal8.open();
 	} );
 
 
+	function initCanvasMenu() {
+		toggleMobileMenu.addEventListener( 'click', toggleCanvasMenu );
 
-
-
-
-
-
-
-	var bodyEl = document.body,
-		content = document.querySelector( '.content-wrap' ),
-		toggleMobileMenu = document.getElementById( 'js-mobile-menu' ),
-		closebtn = document.getElementById( 'close-button' ),
-		isOpen = false;
-
-
-	function initEvents() {
-		toggleMobileMenu.addEventListener( 'click', toggleMenu );
-		if( closebtn ) {
-			closebtn.addEventListener( 'click', toggleMenu );
-		}
-
-		// close the menu element if the target it´s not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
+		// close the menu
+		contentWrap.addEventListener( 'click', function (ev) {
 			var target = ev.target;
-			if( isOpen && target !== toggleMobileMenu ) {
-				toggleMenu();
+			if (isOpen && target !== toggleMobileMenu) {
+				toggleCanvasMenu();
 			}
 		} );
 	}
 
-	function toggleMenu() {
-		if( isOpen ) {
-			classie.remove( bodyEl, 'show-menu' );
+	function toggleCanvasMenu() {
+		if (isOpen) {
+			classie.remove( bodyElement, 'show-menu' );
 		}
 		else {
-			classie.add( bodyEl, 'show-menu' );
+			classie.add( bodyElement, 'show-menu' );
 		}
 		isOpen = !isOpen;
 	}
 
 
+	function detectIe() {
+		"use strict";
 
-	"use strict";
-
-	// Detecting IE
-	var oldIE;
-	if ($('html').is('.ie6, .ie7, .ie8, .ie9')) {
-		oldIE = true;
+		// Detecting IE
+		var oldIE;
+		if ($( 'html' ).is( '.ie6, .ie7, .ie8, .ie9' )) {
+			oldIE = true;
+		}
+		if (oldIE) {
+			$( '.menu-wrap' ).hide();
+			$( '#js-mobile-menu' ).on( 'click', function (e) {
+				$( '.menu-wrap' ).toggle();
+			} );
+		}
 	}
 
-	if (oldIE) {
-		$('.menu-wrap' ).hide();
-		$('#js-mobile-menu' ).on('click',function(e){
-			$('.menu-wrap' ).toggle();
-		});
-
-
-	} else {
-		console.log('no ie')
+	function init() {
+		initCanvasMenu();
+		filterPosts();
+		toggleView();
+		showReplies();
+		detectIe();
 	}
-
 
 	init();
 } );
-
-
-
-
-
-
-
-
-//function initEvents() {
-//	toggleMobileMenu.addEventListener( 'click', toggleMenu );
-//	if( closebtn ) {
-//		closebtn.addEventListener( 'click', toggleMenu );
-//	}
-//
-//	// close the menu element if the target it´s not the menu element or one of its descendants..
-//	content.addEventListener( 'click', function(ev) {
-//		var target = ev.target;
-//		if( isOpen && target !== toggleMobileMenu ) {
-//			toggleMenu();
-//		}
-//	} );
-//}
-//
-//function toggleMenu() {
-//	if( isOpen ) {
-//		classie.remove( bodyEl, 'show-menu' );
-//	}
-//	else {
-//		classie.add( bodyEl, 'show-menu' );
-//	}
-//	isOpen = !isOpen;
-//}
-//
-//init();
-
-//})();

@@ -7,10 +7,10 @@
 // All Sass tools and helpers.
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/typography";
 @import "helpers/_mixins";
 @import "helpers/_functions";
 @import "helpers/_variables";
-@import "compass/typography";
 
 /*------------------------------------------------------------------
 
@@ -43,19 +43,6 @@
 @import "modules/_canvas";
 
 
-/*------------------------------------------------------------------
-
-5.  VIEWS
-
-------------------------------------------------------------------*/
-
-
-/*------------------------------------------------------------------
-
-6.  VENDOR
-
-------------------------------------------------------------------*/
-// All external libraries
 
 
 

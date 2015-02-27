@@ -1,14 +1,16 @@
-
+/* --------------------------------------------------------------
+	Post Layout
+-------------------------------------------------------------- */
 .post-entry {
 	&.view-tile {
-		//		@include column-gap(rem-calc(20));
+		@include column-gap(rem-calc(20));
 		//
-		//		@include breakpoint($medium-screen) {
-		//
-		//			@include column-count(2);
-		//
-		//		}
-		//
+		@include breakpoint($medium-screen) {
+
+			@include column-count(2);
+
+		}
+
 		@include breakpoint($large-screen) {
 
 			@include column-count(3);
@@ -17,8 +19,6 @@
 	}
 	&.view-list {
 		padding: 0;
-		//		@include column-count(1);
-
 		max-width: 570px;
 		margin: 0 auto;
 	}
@@ -64,17 +64,11 @@
 }
 
 .post-author {
-	//	width:60%;
-	//	float: left;
+
 	span {
 		color: #444;
-
-		//
 	}
-	//	&:hover, &:focus {
-	//		text-decoration: none;
-	//
-	//	}
+
 }
 
 .post-meta {
@@ -85,8 +79,25 @@
 	}
 }
 
-.view-tile .post-meta.top, .view-list .post-meta.bottom {
+.view-tile .post-meta.top {
 	display: none;
+}
+
+.view-list .post-meta.bottom {
+	@include breakpoint($medium-screen) {
+		display: none;
+	}
+
+}
+
+.view-list .post-meta.top {
+	display: none;
+
+	@include breakpoint($medium-screen) {
+		display: block;
+
+	}
+
 }
 
 .view-list .post-action {
@@ -99,12 +110,26 @@
 
 }
 
+.view-tile .post-video .post-image a {
+	position: inherit;
+}
+
+.view-tile .post-video .post-image a > div {
+
+	@include breakpoint($medium-screen) {
+		display: none;
+	}
+}
+
 .post-content {
 	color: $pale-sky;
 	font-size: rem-calc(15);
 	line-height: 1.6;
 	a {
 		@include link-colors($loblolly, $caribbean-green);
+	}
+	p {
+		word-break: break-word;
 	}
 }
 
@@ -161,6 +186,16 @@
 			margin-top: rem-calc(8);
 
 		}
+
+		&.up .caret {
+			border-top-width: 0;
+			border-bottom-width: 5px;
+			margin-top: rem-calc(4);
+			border-bottom: 4px solid $loblolly;;
+			border-top: 4px solid transparent;
+			content: "";
+		}
+
 	}
 }
 
@@ -190,11 +225,3 @@
 		opacity: 0.5;
 	}
 }
-//
-//.view-tile {
-//
-//	.post-video .post-image a {
-//		display: inherit;
-//		position: static;
-//	}
-//}
