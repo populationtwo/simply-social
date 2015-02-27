@@ -150,3 +150,68 @@ img {
 	@include outer-container();
 }
 
+
+
+
+//.animated {
+//	-webkit-animation-duration: 1s;
+//	animation-duration: 1s;
+//	-webkit-animation-fill-mode: both;
+//	animation-fill-mode: both;
+//}
+//
+//@-webkit-keyframes fadeInDown {
+//	0% {
+//		opacity: 0;
+//		-webkit-transform: translate3d(0, -100%, 0);
+//		transform: translate3d(0, -100%, 0);
+//	}
+//
+//	100% {
+//		opacity: 1;
+//		-webkit-transform: none;
+//		transform: none;
+//	}
+//}
+//
+//@keyframes fadeInDown {
+//	0% {
+//		opacity: 0;
+//		-webkit-transform: translate3d(0, -100%, 0);
+//		transform: translate3d(0, -100%, 0);
+//	}
+//
+//	100% {
+//		opacity: 1;
+//		-webkit-transform: none;
+//		transform: none;
+//	}
+//}
+//
+//.fadeInDown {
+//	-webkit-animation-name: fadeInDown;
+//	animation-name: fadeInDown;
+//	-webkit-animation-duration: 1s;
+//	animation-duration: 1s;
+//	-webkit-animation-fill-mode: both;
+//	animation-fill-mode: both;
+//}
+
+
+.btn {
+	padding: 10px 21px;
+
+		color: #FFF;
+//		border: 2px solid $button-basic-border-color;
+		background: $caribbean-green;
+//		text-transform: uppercase;
+		//padding: rem-calc(10px) rem-calc(14px) rem-calc(10px) rem-calc(22px);
+		@include border-radius(rem-calc(2px));
+		&:hover {
+			background: $deep-sea;
+			text-decoration: none;
+		color: #FFF;
+
+		}
+
+}

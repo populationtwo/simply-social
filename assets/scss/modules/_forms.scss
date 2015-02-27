@@ -1,3 +1,6 @@
+textarea:focus, input:focus{
+	outline: 0;
+}
 .ss-form {
 	padding: rem-calc(24) rem-calc(20);
 	border-top: 1px solid black(0.05);
@@ -26,4 +29,107 @@
 		position: relative;
 	}
 
+}
+
+.ss-form-hero {
+	padding: 0 0 rem-calc(15);
+	input {
+		margin: 0;
+		padding: 0;
+		border-radius: rem-calc(3);
+		background: transparent;
+		font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		font-size: rem-calc(30);
+		color: #FFF;
+		width: 100%;
+		font-weight: 300;
+
+		&::-webkit-input-placeholder {
+			/* WebKit browsers */
+			color: white(0.5);
+		}
+		&::-moz-placeholder {
+			/* Mozilla Firefox 4 to 18 */
+			color: white(0.5);
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			/* Internet Explorer 10+ */
+			color: white(0.5);
+		}
+		&.has-border {
+			@include appearance(none);
+			border: 1px solid transparent;
+
+			&:focus {
+				//				border-color: #FFF;
+				//				box-shadow: 0 0 5px black(0.1);
+				outline: none;
+			}
+		}
+		padding: rem-calc(12) 0;
+
+	}
+
+	textarea {
+		z-index: 3;
+		margin: 0;
+		padding: 0;
+		border-radius: rem-calc(3);
+		background: transparent;
+		font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		font-size: rem-calc(30);
+		color: #FFF;
+		width: 100%;
+		font-weight: 300;
+		height: rem-calc(150);
+		border: none;
+		resize: none;
+		overflow: auto;		padding: rem-calc(12) 0;
+
+		&::-webkit-input-placeholder {
+			/* WebKit browsers */
+			color: white(0.5);
+		}
+		&::-moz-placeholder {
+			/* Mozilla Firefox 4 to 18 */
+			color: white(0.5);
+			opacity: 1;
+		}
+		&:-ms-input-placeholder {
+			/* Internet Explorer 10+ */
+			color: white(0.5);
+		}
+		@include breakpoint($medium-screen){
+			height: rem-calc(80);
+		}
+		&.has-border {
+			@include appearance(none);
+			border: 1px solid transparent;
+
+			&:focus {
+				//				border-color: #FFF;
+				//				box-shadow: 0 0 5px black(0.1);
+				outline: none;
+			}
+		}
+	}
+	.fieldset {
+		position: relative;
+	}
+
+}
+
+.compose-post.basic {
+	.ss-compose {
+		font: inherit;
+		color: #70767f;
+	}
+	textarea {
+		background: white;
+		margin-top: 20px;
+		font-size: rem-calc(16);
+		color: $gray;
+		padding: rem-calc(12);
+	}
 }

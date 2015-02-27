@@ -28,7 +28,7 @@
 	top: 0;
 	left: 0;
 	z-index: 10;
-	width: 100%;
+//	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.3);
 	content: '';
@@ -144,6 +144,7 @@
 .canvas-list a {
 	display: block;
 	padding: rem-calc(12) 0;
+	font-size: rem-calc(14);
 //	-webkit-transform: translate3d(0, 500px, 0);
 //	transform: translate3d(0, 500px, 0);
 }

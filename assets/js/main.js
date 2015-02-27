@@ -31,7 +31,7 @@ $( '.main-content' ).on( 'click', ".js-btn-expand", function (e) {
 
 $( document ).ready( function () {
 
-
+//$('.compose-post' ).addClass('fadeInDown');
 	//var bodyEl = document.body,
 	//content = document.querySelector( '.content-wrap' ),
 	//var filterBar = document.getElementById( 'filterbar' )
@@ -115,6 +115,7 @@ $( document ).ready( function () {
 	var myContent5 = document.getElementById( 'jac-video' );
 	var myContent6 = document.getElementById( 'vitor-video' );
 	var myContent7 = document.getElementById( 'michael-video' );
+	var myContent8 = document.getElementById( 'compose-message-modal' );
 
 	var myModal1 = new Modal( {
 		content: myContent1
@@ -137,6 +138,12 @@ $( document ).ready( function () {
 	var myModal7 = new Modal( {
 		content: myContent7
 	} );
+	var myModal8 = new Modal( {
+		content: myContent8,
+		maxWidth: 575
+	} );
+
+
 
 	$( '.main-content' ).on( 'click', "#modal-trigger-meg", function (e) {
 		e.preventDefault();
@@ -166,7 +173,10 @@ $( document ).ready( function () {
 		e.preventDefault();
 		myModal7.open();
 	} );
-
+	$( '#js-compose-message, #js-compose-message-mobile' ).on( 'click',  function (e) {
+		e.preventDefault();
+		myModal8.open();
+	} );
 
 
 
@@ -210,16 +220,35 @@ $( document ).ready( function () {
 
 
 
+	"use strict";
+
+	// Detecting IE
+	var oldIE;
+	if ($('html').is('.ie6, .ie7, .ie8, .ie9')) {
+		oldIE = true;
+	}
+
+	if (oldIE) {
+		$('.menu-wrap' ).hide();
+		$('#js-mobile-menu' ).on('click',function(e){
+			$('.menu-wrap' ).toggle();
+		});
 
 
-
-
-
-
+	} else {
+		console.log('no ie')
+	}
 
 
 	init();
 } );
+
+
+
+
+
+
+
 
 //function initEvents() {
 //	toggleMobileMenu.addEventListener( 'click', toggleMenu );

@@ -147,3 +147,10 @@ $max-width: 1200px!default;
 		}
 	}
 }
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}
+
