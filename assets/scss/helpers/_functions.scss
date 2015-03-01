@@ -10,7 +10,6 @@
     @return rgba(255,255,255,$opacity)
 }
 
-$rem-base: 16px !default;
 // STRIP UNIT
 // It strips the unit of measure and returns it
 @function strip-unit($num) {

@@ -4,63 +4,55 @@
 
 .ss-mobile-menu-wrapper a {
 	color: $athens-gray;
-}
-
-.ss-mobile-menu-wrapper a:hover,
-.ss-mobile-menu-wrapper a:focus {
-	color: $caribbean-green;
-	text-decoration: none;
+	a:hover,
+	a:focus {
+		color: $caribbean-green;
+		text-decoration: none;
+	}
 }
 
 .content-main {
 	position: relative;
-}
-
-.content-main::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.3);
-	content: '';
-	opacity: 0;
-	-webkit-transform: translate3d(100%, 0, 0);
-	transform: translate3d(100%, 0, 0);
-	-webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
-	transition: opacity 0.4s, transform 0s 0.4s;
-	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		height: 100%;
+		background: black(0.3);
+		content: '';
+		opacity: 0;
+		@include translate3d(100%, 0, 0);
+		@include single-transition(opacity 0.4s);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
 }
 
 .menu-btn {
 	position: fixed;
 	z-index: 1000;
-	margin: 5px;
+	margin: rem-calc(5);
 	padding: 0;
-	width: 40px;
-	height: 35px;
+	width: rem-calc(40);
+	height: rem-calc(35);
 	border: none;
-	text-indent: 40px;
-	font-size: 1.5em;
+	text-indent: rem-calc(40);
+	font-size: rem-calc(24);
 	color: transparent;
 	background: transparent;
-}
-
-.menu-btn::before {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	bottom: 5px;
-	left: 5px;
-	background: linear-gradient($gray 20%, transparent 20%, transparent 40%, $gray 40%, $gray 60%, transparent 60%, transparent 80%, $gray 80%);
-	content: '';
-}
-
-.menu-btn:hover {
 	&:before {
-		//	opacity: 0.6;
-		background: linear-gradient($caribbean-green 20%, transparent 20%, transparent 40%, $caribbean-green 40%, $caribbean-green 60%, transparent 60%, transparent 80%, $caribbean-green 80%);
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
+		background: linear-gradient($gray 20%, transparent 20%, transparent 40%, $gray 40%, $gray 60%, transparent 60%, transparent 80%, $gray 80%);
+		content: '';
+	}
+	&:hover {
+		&:before {
+			background: linear-gradient($caribbean-green 20%, transparent 20%, transparent 40%, $caribbean-green 40%, $caribbean-green 60%, transparent 60%, transparent 80%, $caribbean-green 80%);
+		}
 	}
 }
 
@@ -71,21 +63,18 @@
 	width: 210px;
 	height: auto;
 	background: $gray-dark;
-	padding: 15px 30px;
-	font-size: 1.15em;
-	-webkit-transform: translate3d(-320px, 0, 0);
-	transform: translate3d(-320px, 0, 0);
+	padding: rem-calc(15) rem-calc(30);
+	font-size: rem-calc(18);
+	@include translate3d(-320px, 0, 0);
 	-webkit-transition: -webkit-transform 0.4s;
-	transition: transform 0.4s;
-	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	@include transition(transform 0.4s);
+	@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
 	@include breakpoint($medium-screen) {
 		display: none;
 	}
 }
 
-.menu,
-{
+.menu {
 	height: auto;
 }
 
@@ -93,24 +82,24 @@
 	display: block;
 	padding: rem-calc(12) 0;
 	font-size: rem-calc(14);
+	&:hover, &:focus {
+		text-decoration: none;
+		color: $caribbean-green;
+	}
 
 }
 
-.ss-mobile-menu-active .ss-mobile-menu-wrapper {
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	-webkit-transition: -webkit-transform 0.8s;
-	transition: transform 0.8s;
-	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
+.ss-mobile-menu-active {
+	.ss-mobile-menu-wrapper {
+		@include translate3d(0, 0, 0);
+		@include transition(transform 0.8s);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
 
-.ss-mobile-menu-active .content-main::before {
-	opacity: 1;
-	-webkit-transition: opacity 0.8s;
-	transition: opacity 0.8s;
-	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+	.content-main::before {
+		opacity: 1;
+		@include translate3d(0, 0, 0);
+		@include transition(opacity 0.8s);
+		@include transition-timing-function(cubic-bezier(0.7, 0, 0.3, 1));
+	}
 }

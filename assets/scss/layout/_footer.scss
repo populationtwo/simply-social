@@ -23,6 +23,6 @@
 		padding: 0 12px;
 	}
 	a {
-		@include single-transition(color, .1s, ease-out)
+		@include single-transition(color, .1s, ease-out);
 	}
 }

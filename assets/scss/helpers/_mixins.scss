@@ -17,7 +17,7 @@ $max-width: 1200px !default;
 
 %inline-list {
 	margin: 0 auto;
-	margin-left: -1.375rem;
+	margin-left: rem-calc(-22);
 	margin-right: 0;
 	padding: 0;
 	list-style: none;
@@ -25,7 +25,7 @@ $max-width: 1200px !default;
 	> li {
 		list-style: none;
 		float: left;
-		margin-left: 1.375rem;
+		margin-left: rem-calc(22);
 		display: block;
 		> * {
 			display: block;

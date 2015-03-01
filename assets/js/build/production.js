@@ -96,7 +96,7 @@ if ( typeof define === 'function' && define.amd ) {
 		// Define option defaults 
 		var defaults = {
 			autoOpen: false,
-			className: 'fade-and-drop',
+			className: "",
 			closeButton: true,
 			content: "",
 			maxWidth: 980,
@@ -319,8 +319,8 @@ if ( typeof define === 'function' && define.amd ) {
 	 *
 	 * @param e
 	 */
-	//
-	// I know it's not pretty, need to refactor these. There's a better way.
+
+	// I know it's not pretty. The modal should be loaded dynamically.
 	var myContent1 = document.getElementById( 'meg-photo' ),
 		myContent2 = document.getElementById( 'jenny-photo' ),
 		myContent3 = document.getElementById( 'buzz-photo' ),
@@ -330,64 +330,53 @@ if ( typeof define === 'function' && define.amd ) {
 		myContent7 = document.getElementById( 'michael-video' ),
 		myContent8 = document.getElementById( 'compose-message-modal' );
 
-	var myModal1 = new Modal( {
-			content: myContent1
-		} ),
-		myModal2 = new Modal( {
-			content: myContent2
-		} ),
-		myModal3 = new Modal( {
-			content: myContent3
-		} ),
-		myModal4 = new Modal( {
-			content: myContent4
-		} ),
-		myModal5 = new Modal( {
-			content: myContent5
-		} ),
-		myModal6 = new Modal( {
-			content: myContent6
-		} ),
-		myModal7 = new Modal( {
-			content: myContent7
-		} ),
-		myModal8 = new Modal( {
-			content : myContent8,
-			maxWidth: 575
-		} );
+	var myModal = {};
+	var myContent = [myContent1, myContent2, myContent3, myContent4, myContent5, myContent6, myContent7, myContent8];
 
+	for (var i = 0; i < myContent.length; i++) {
+		if (i == 7) {
+			myModal[i] = new Modal( {
+				content : myContent[i],
+				maxWidth: 575
+			} );
+		} else {
+			myModal[i] = new Modal( {
+				content: myContent[i]
+			} );
+		}
+	}
 
 	$mainContent.on( 'click', "#modal-trigger-meg", function (e) {
 		e.preventDefault();
-		myModal1.open();
+		myModal[0].open();
 	} );
 	$mainContent.on( 'click', "#modal-trigger-jenny", function (e) {
 		e.preventDefault();
-		myModal2.open();
+		myModal[1].open();
 	} );
 	$mainContent.on( 'click', "#modal-trigger-buzz", function (e) {
 		e.preventDefault();
-		myModal3.open();
+		myModal[2].open();
 	} );
 	$mainContent.on( 'click', "#modal-trigger-samihah", function (e) {
 		e.preventDefault();
-		myModal4.open();
+		myModal[3].open();
 	} );
 	$mainContent.on( 'click', "#modal-trigger-jac", function (e) {
 		e.preventDefault();
-		myModal5.open();
+		myModal[4].open();
 	} );
 	$mainContent.on( 'click', "#modal-trigger-vitor", function (e) {
 		e.preventDefault();
-		myModal6.open();
+		myModal[5].open();
 	} );
 	$mainContent.on( 'click', "#modal-trigger-michael", function (e) {
 		e.preventDefault();
-		myModal7.open();
+		myModal[6].open();
 	} );
 	$( '#js-compose-message, #js-compose-message-mobile' ).on( 'click', function (e) {
 		e.preventDefault();
-		myModal8.open();
+		myModal[7].open();
 	} );
 
 	/**

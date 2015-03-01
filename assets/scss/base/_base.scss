@@ -42,10 +42,8 @@ img {
 
 .video-wrap {
 	position: relative;
-	padding-top: 1.5625rem;
-	padding-bottom: 67.5%;
 	height: 0;
-	margin-bottom: 1rem;
+	margin-bottom: rem-calc(16);
 	overflow: hidden;
 	padding-top: 0;
 	padding-bottom: 56.34%;
@@ -62,10 +60,8 @@ img {
 	height: 100%;
 }
 
-
 .btn {
-	padding: 10px 21px;
-
+	padding: rem-calc(10) rem-calc(21);
 	color: #FFF;
 	background: $caribbean-green;
 	@include border-radius(rem-calc(2px));
@@ -76,11 +72,9 @@ img {
 	}
 }
 
-
 .image-replace {
 	border: 0;
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
 }
-

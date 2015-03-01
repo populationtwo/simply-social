@@ -15,7 +15,7 @@
 		// Define option defaults 
 		var defaults = {
 			autoOpen: false,
-			className: 'fade-and-drop',
+			className: "",
 			closeButton: true,
 			content: "",
 			maxWidth: 980,

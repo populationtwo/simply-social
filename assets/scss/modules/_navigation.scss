@@ -30,7 +30,6 @@
 		margin-left: 0;
 		float: left;
 		width: 60%;
-
 	}
 	a {
 		color: #FFF;
@@ -61,7 +60,6 @@
 		@include single-transition(border, 0.2s, ease-in);
 		&:hover, &.active {
 			border-bottom: 4px solid $caribbean-green;
-
 		}
 	}
 	li {
@@ -95,7 +93,6 @@
 		opacity: 0.75;
 		&:hover, &.active {
 			opacity: 1;
-
 		}
 	}
 	li {
@@ -104,3 +101,81 @@
 
 	}
 }
+
+.dropdown-menu {
+	position: relative;
+	a {
+		float: left;
+		padding: rem-calc(15) rem-calc(10);
+		text-transform: uppercase;
+		font-size: rem-calc(12);
+		color: rgba(0, 0, 0, 0.5);
+		&:hover {
+			text-decoration: none;
+			background: rgba(0, 0, 0, 0.05);
+			color: #000;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+	}
+	ul {
+		padding: 0;
+		list-style: none;
+		margin: 20px 0 0 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: rem-calc(30);
+		left: rem-calc(-10);
+		z-index: 10;
+		background: #F6F6F6;
+		border-radius: 4px;
+		transition: all .1s ease-out;
+		height: auto;
+		li {
+			float: none;
+			display: block;
+			border: 0;
+			_line-height: 0;
+			&:first-child > a {
+				border-radius: 3px 3px 0 0;
+				&:after {
+					content: '';
+					position: absolute;
+					left: rem-calc(55);
+					top: -12px;
+					display: block;
+					width: 0;
+					height: 0;
+					border: inset 6px;
+					border-color: transparent transparent #F6F6F6 transparent;
+					border-bottom-style: solid;
+				}
+
+			}
+			&:last-child > a {
+				border-radius: 0 0 4px 4px;
+				box-shadow: none;
+			}
+
+		}
+		a {
+			padding: rem-calc(10) rem-calc(15);
+			width: rem-calc(97);
+			_height: 10px;
+			display: block;
+			white-space: nowrap;
+			float: none;
+			text-transform: none;
+			box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		}
+
+	}
+	&:hover > ul {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
