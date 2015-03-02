@@ -29,25 +29,18 @@
 		your browser</a> to improve your experience.</p>
 <![endif]-->
 <div class="ss-mobile-header">
-	<div class="mobile-header-inner">
+	<nav class="mobile-header-inner">
 		<div class="message-mobile-btn">
 			<a href="#" class="new-message-btn" id="js-compose-message-mobile">New message</a>
-
-			<!--<a href="#" id="user-nav" class="closed icon-user">					<img src="assets/img/build/avatar-1.png" alt="" />-->
-			<!--</a>-->
 		</div>
 
 		<div class="mobile-header-content">
-
 			<a href="#">
 				<img src="assets/img/build/main-logo.png" alt="SimpySocial" />
 			</a>
 		</div>
-
-
 		<button class="menu-btn" id="js-mobile-menu">Open Menu</button>
-
-	</div>
+	</nav>
 </div>
 <!--end .ss-mobile-header-->
 <div class="container-a outer-wrapper">
@@ -68,134 +61,121 @@
 				<button type="submit" class="search-btn"></button>
 			</form>
 		</div>
-
-
 	</div>
 </aside>
 <div class="content-wrap canvas-content-wrap">
+<header class="page-header">
+	<div class="container">
+		<h1 class="logo">
+			<a href="#">
+				<img src="assets/img/build/main-logo.png" alt="" />
+			</a>
+		</h1>
 
-
-	<header class="page-header">
-		<div class="container">
-
-			<h1 class="logo">
-				<a href="#">
-					<img src="assets/img/build/main-logo.png" alt="" />
+		<div class="right-nav">
+			<div class="my-account dropdown-menu">
+				<a class="avatar " href="">
+					<img src="assets/img/build/avatar-1.png" alt="" />
+					<span class="caret"></span>
 				</a>
-			</h1>
+				<ul class="sub-nav">
+					<li><a href="">Profile</a></li>
+					<li><a href="">Following</a></li>
+					<li><a href="">Followers</a></li>
+					<li><a href="">Setting</a></li>
+				</ul>
+			</div>
+			<div class="ss-search-bar">
+				<form role="search" method="get" action="">
+					<input type="text" placeholder="" class="search-input" />
+					<button type="submit" class="search-btn"></button>
+				</form>
+			</div>
+			<a href="#" class="new-message-btn" id="js-compose-message">New message</a>
+		</div>
+		<!-- end .right-nav -->
+	</div>
+</header>
+<!-- end .page-header -->
 
-			<div class="right-nav">
+<div class="content-main">
+	<div class="hero-header">
+		<div class="container">
+			<div class="compose-post">
 
-				<div class="my-account dropdown-menu">
-					<a class="avatar " href="">
-						<img src="assets/img/build/avatar-1.png" alt="" />
-						<span class="caret"></span>
-					</a>
-					<ul class="sub-nav">
-						<li><a href="">Profile</a></li>
-						<li><a href="">Following</a></li>
-						<li><a href="">Followers</a></li>
-						<li><a href="">Setting</a></li>
+
+				<form class="ss-form-hero">
+					<p class="fieldset">
+						<label class="image-replace ss-compose">What’s on your mind?</label>
+						<textarea name="" placeholder="What’s on your mind?" cols="" rows=""></textarea>
+					</p>
+
+				</form>
+
+
+				<div class="compose-post-option">
+					<ul class="add-attachment">
+						<li><a class="attachment-photo" href="">Add Photo</a></li>
+						<li><a class="attachment-video" href="">Add Video</a></li>
 					</ul>
 				</div>
 
-				<div class="ss-search-bar">
-					<form role="search" method="get" action="">
-						<input type="text" placeholder="" class="search-input" />
-						<button type="submit" class="search-btn"></button>
-					</form>
-				</div>
-				<a href="#" class="new-message-btn" id="js-compose-message">New message</a>
 			</div>
-			<!-- end .righ-nav -->
-
 		</div>
-	</header>
-	<!-- end .page-header -->
+	</div>
+	<!-- end .hero-header -->
 
-	<div class="content-main">
-		<div class="hero-header">
-			<div class="container">
-				<div class="compose-post">
+	<div class="page-content">
+		<nav class="sub-nav">
+			<ul class="filter-nav" id="filterbar">
+				<li class="filter-nav__item active">
+					<a class="" href="#" id="post"><span class="icon-comment icon"></span><span>All Posts</span></a>
+				</li>
+				<li class="filter-nav__item">
+					<a class="filter" href="#" id="post-photo"><span class="icon-camera-outline icon"></span><span>Photos</span></a>
+				</li>
+				<li class="filter-nav__item">
+					<a class="filter" href="#" id="post-video"><span class="icon-videocam icon"></span><span>Videos</span></a>
+				</li>
+			</ul>
+			<ul class="view-nav">
+				<li><a class="view-nav__item " href="" id="view-tile"><span class="icon-th-large"></span></a>
+				</li>
+				<li><a class="view-nav__item active" href="" id="view-list"><span class="icon-menu"></span></a></li>
+			</ul>
+		</nav>
 
 
-					<form class="ss-form-hero">
-						<p class="fieldset">
-							<label class="image-replace ss-compose">What’s on your mind?</label>
-							<textarea name="" placeholder="What’s on your mind?" cols="" rows=""></textarea>
-						</p>
-
-					</form>
-
-
-					<div class="compose-post-option">
-						<ul class="add-attachment">
-							<li><a class="attachment-photo" href="">Add Photo</a></li>
-							<li><a class="attachment-video" href="">Add Video</a></li>
-						</ul>
-					</div>
-
-				</div>
+		<div class="main-content">
+			<div class="container" id="partials-content">
+				<!-- ===== Load  content from /partials ===== -->
 			</div>
-
-
 		</div>
-		<!-- end .hero-header -->
-
-		<div class="page-content">
-			<nav class="sub-nav">
-				<ul class="filter-nav" id="filterbar">
-					<li class="filter-nav__item active">
-						<a class="" href="#" id="post"><span class="icon-comment icon"></span><span>All Posts</span></a>
-					</li>
-					<li class="filter-nav__item">
-						<a class="filter" href="#" id="post-photo"><span class="icon-camera-outline icon"></span><span>Photos</span></a>
-					</li>
-					<li class="filter-nav__item">
-						<a class="filter" href="#" id="post-video"><span class="icon-videocam icon"></span><span>Videos</span></a>
-					</li>
-				</ul>
-				<ul class="view-nav">
-					<li><a class="view-nav__item " href="" id="view-tile"><span class="icon-th-large"></span></a>
-					</li>
-					<li><a class="view-nav__item active" href="" id="view-list"><span class="icon-menu"></span></a></li>
-				</ul>
-			</nav>
-
-
-			<div class="main-content">
-				<div class="container" id="partials-content">
-					<!-- ===== Load  content from /partials ===== -->
-				</div>
-			</div>
-			<!-- end .main-content -->
-
-		</div>
-		<!-- end .page-content -->
+		<!-- end .main-content -->
 
 	</div>
-	<!-- end .content -->
-
-	<footer class="page-footer">
-		<ul class="footer-links footer-links-social">
-			<li>
-				<a href="" class="icon">About Us</a>
-			</li>
-			<li>
-				<a href="" class="icon">Support</a>
-			</li>
-			<li>
-				<a href="" class="icon">Privacy</a>
-			</li>
-			<li>
-				<a href="" class="icon">Terms</a>
-			</li>
-			<li>&copy; 2015 SimplySocial</li>
-		</ul>
-	</footer>
-	<!-- end .page-footer -->
-
+	<!-- end .page-content -->
 </div>
+<!-- end .content-main -->
+
+<footer class="page-footer">
+	<ul class="footer-links footer-links-social">
+		<li>
+			<a href="" class="icon">About Us</a>
+		</li>
+		<li>
+			<a href="" class="icon">Support</a>
+		</li>
+		<li>
+			<a href="" class="icon">Privacy</a>
+		</li>
+		<li>
+			<a href="" class="icon">Terms</a>
+		</li>
+		<li>&copy; 2015 SimplySocial</li>
+	</ul>
+</footer>
+<!-- end .page-footer -->
 
 
 <div id="partials-modal-content">
@@ -205,7 +185,6 @@ I use this approach due to the time constraint.
 -->
 
 <div id="meg-photo" class="modal-photo">
-
 	<div class="post-image modal-image">
 		<img src="assets/img/build/photos/large/beach.jpg" alt="beach" />
 	</div>
@@ -232,11 +211,9 @@ I use this approach due to the time constraint.
 				<p>My view this morning is simply beautiful...
 					<a href="http://instagram.com/p/mV0PUrHRwQ/">instagram.com/p/mV0PUrHRwQ/</a></p>
 			</div>
-
 		</div>
 		<!--end .post-main -->
 	</div>
-
 	<!--end .post-image -->
 	<div class="post-new">
 		<form class="ss-form">
@@ -245,13 +222,10 @@ I use this approach due to the time constraint.
 			</p>
 		</form>
 	</div>
-
-
 </div>
 
 
 <div id="jenny-photo" class="modal-photo">
-
 	<div class="post-image modal-image">
 		<img src="assets/img/build/photos/large/portrait.jpg" alt="beach" />
 	</div>
@@ -292,13 +266,10 @@ I use this approach due to the time constraint.
 			</p>
 		</form>
 	</div>
-
-
 </div>
 
 
 <div id="buzz-photo" class="modal-photo">
-
 	<div class="post-image modal-image">
 		<img src="assets/img/build/photos/large/road-trip.jpg" alt="road-trip" />
 	</div>
@@ -325,11 +296,9 @@ I use this approach due to the time constraint.
 				<p>Road trip! <a href="http://bit.ly/1lE4uJc">bit.ly/1hkXFdK</a>
 				</p>
 			</div>
-
 		</div>
 		<!--end .post-main -->
 	</div>
-
 	<!--end .post-image -->
 	<div class="post-new">
 		<form class="ss-form">
@@ -338,13 +307,10 @@ I use this approach due to the time constraint.
 			</p>
 		</form>
 	</div>
-
-
 </div>
 
 
 <div id="samihah-photo" class="modal-photo">
-
 	<div class="post-image modal-image">
 		<img src="assets/img/build/photos/large/dandelion.jpg" alt="road-trip" />
 	</div>
@@ -432,7 +398,6 @@ I use this approach due to the time constraint.
 
 
 </div>
-
 
 <div id="michael-video" class="modal-video">
 
@@ -524,8 +489,6 @@ I use this approach due to the time constraint.
 
 </div>
 
-</div>
-
 
 <div id="compose-message-modal" class="modal-new-compose">
 
@@ -552,11 +515,17 @@ I use this approach due to the time constraint.
 
 
 </div>
+<!-- end .modal-new-compose -->
 
 </div>
+<!-- end #partials-modal-content -->
+
+
 </div>
 <!-- /content-wrap -->
-</div><!-- /container a -->
+
+</div>
+<!-- /container a -->
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!--<script src="assets/js/classie.js"></script>-->
